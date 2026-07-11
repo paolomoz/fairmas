@@ -1,0 +1,90 @@
+/*
+ * team — member grid (about page, navy band).
+ * Avatar circle (photo or aria-hidden initials fallback), name link, role.
+ */
+
+.team .team-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 48px;
+}
+
+.team .member {
+  text-align: center;
+}
+
+.team .member-avatar {
+  width: min(180px, 100%);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  background: var(--color-navy-tint);
+  overflow: hidden;
+}
+
+.team .member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team .member-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-fg);
+}
+
+.team .member-name {
+  margin: 0 0 2px;
+  max-width: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.team .member-name a:any-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  padding-block: 8px;
+  margin-block: -6px;
+}
+
+.team .member-name a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.team .member-role {
+  margin: 0 auto;
+  max-width: 26ch;
+  font-size: 15px;
+}
+
+main .section.dark .team .member-role {
+  color: var(--color-navy-tint);
+}
+
+main .section.dark .team .member-name a:any-link {
+  color: #fff;
+}
+
+@media (width >= 600px) {
+  .team .team-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px 24px;
+  }
+}
+
+@media (width >= 900px) {
+  .team .team-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 96px 48px;
+  }
+}

@@ -1,37 +1,311 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
+/* stylelint-disable no-descending-specificity -- variant sections target the
+   same tags at different specificity by design */
+
+/*
+ * hero — base block styles + globe variant (owned here).
+ * Sibling variants extend the clearly-marked sections at the bottom of this
+ * file (photo / contact / slim) — keep base selectors untouched.
+ */
+
+.hero {
+  display: grid;
+  gap: 32px;
+}
+
+.hero .hero-content h1 span { display: block; }
+
+.hero .hero-lede {
+  margin-bottom: 16px;
+  font-size: var(--heading-font-size-m);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.hero .hero-cta {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 16px;
+  align-items: stretch;
+  margin-top: 24px;
+}
+
+.hero .hero-cta p {
+  display: flex;
+  margin: 0;
+}
+
+.hero .hero-cta a.button { flex: 1; }
+
+.hero .hero-media {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .hero-media video {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: transparent;
+}
+
+.hero .hero-video-toggle {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 18px;
+  border: 1px solid var(--color-hairline);
+  border-radius: 999px;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: inherit;
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+}
+
+.hero .hero-video-toggle:hover { border-color: var(--color-fg); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero .hero-content {
+    animation: hero-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @keyframes hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (width >= 600px) {
+  .hero .hero-cta {
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .hero .hero-cta a.button { flex: none; }
+}
+
+/* ------------------------------------------------------------------
+   variant: globe (home) — copy left, full-height brand video right.
+   The video flushes the section's vertical padding at desktop (the band
+   color #f1f1f1 is baked into the asset — section style "hero-band").
+   ------------------------------------------------------------------ */
+
+@media (width >= 900px) {
+  .hero.globe {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    gap: 48px;
+    align-items: center;
+  }
+
+  .hero.globe .hero-media {
+    align-items: flex-end;
+
+    /* full-bleed height: cancel the section's vertical padding */
+    margin-block: calc(-1 * var(--section-padding));
+  }
+
+  .hero.globe .hero-media video {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+/* ------------------------------------------------------------------
+   variant: photo (fairplanner / about) — BEGIN (templates agent)
+   full-bleed authored photo, computed navy scrim (left-weighted),
+   white copy left. Section carries no padding; the block owns it.
+   ------------------------------------------------------------------ */
+
+main .hero-container:has(.hero.photo),
+main .hero-container:has(.hero.slim) {
   padding: 0;
 }
 
-.hero {
+main .hero-container:has(.hero.photo) > div,
+main .hero-container:has(.hero.slim) > div {
+  max-width: none;
+}
+
+.hero.photo {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  display: block;
+  overflow: hidden;
+  background: var(--color-navy-ink);
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
-}
-
-.hero picture {
+.hero.photo .hero-media {
   position: absolute;
-  z-index: -1;
   inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  display: block;
 }
 
-.hero img {
-  object-fit: cover;
+.hero.photo .hero-media picture,
+.hero.photo .hero-media img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: 60% 30%;
+}
+
+/* computed scrim: worst-case composite over a white pixel >= 5:1 (see
+   migrated contrast table); uniform heavier alpha below 600px */
+.hero.photo .hero-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(22 35 43 / 78%);
+}
+
+.hero.photo .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: clamp(72px, 9vw, 128px) 24px;
+}
+
+.hero.photo h1,
+.hero.photo .hero-lede {
+  color: #fff;
+  max-width: 38rem;
+}
+
+.hero.photo .hero-lede {
+  max-width: 34ch;
+}
+
+/* on-photo secondary button reads white (btn-on-navy in the migrated spec) */
+.hero.photo a.button.secondary {
+  border-color: #fff;
+  color: #fff;
+}
+
+.hero.photo a.button.secondary:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: var(--color-navy-ink);
+}
+
+@media (width >= 600px) {
+  .hero.photo .hero-media::after {
+    background: linear-gradient(
+      90deg,
+      rgb(22 35 43 / 82%) 0%,
+      rgb(22 35 43 / 76%) 50%,
+      rgb(22 35 43 / 40%) 70%,
+      rgb(22 35 43 / 10%) 100%
+    );
+  }
+}
+
+/* ------------------------------------------------------------------
+   variant: photo — END
+   ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------
+   variant: contact — BEGIN (templates agent)
+   hero-band section ground; globe art beside kicker/h1/lede copy
+   (copy first on mobile, art left / copy right from 900px).
+   ------------------------------------------------------------------ */
+
+.hero.contact {
+  gap: 32px;
+}
+
+.hero.contact .hero-media img {
+  width: 100%;
+  max-width: 300px;
+  margin-inline: auto;
+}
+
+/* lede: the paragraph after the h1 */
+.hero.contact .hero-content h1 + p {
+  margin-bottom: 0;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* kicker: the paragraph before the h1 */
+.hero.contact .hero-content > p:first-child {
+  margin: 0 0 4px;
+  max-width: none;
+  font-size: clamp(20px, 1.2vw + 14px, 25px);
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.hero.contact h1 {
+  margin-bottom: 8px;
 }
 
 @media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
+  .hero.contact {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 48px;
+    align-items: center;
+  }
+
+  .hero.contact .hero-content {
+    order: 2;
+  }
+
+  .hero.contact .hero-media {
+    order: 1;
+  }
+
+  .hero.contact .hero-media img {
+    max-width: 440px;
   }
 }
+
+/* ------------------------------------------------------------------
+   variant: contact — END
+   ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------
+   variant: slim (imprint) — BEGIN (templates agent)
+   compact navy identity band, h1 only. Section carries no padding
+   (shared :has rule in the photo section above); the block owns it.
+   ------------------------------------------------------------------ */
+
+.hero.slim {
+  display: block;
+  background: linear-gradient(135deg, var(--color-navy-ink) 0%, var(--color-fg) 100%);
+}
+
+.hero.slim .hero-content {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: 48px 24px;
+}
+
+.hero.slim h1 {
+  margin: 0;
+  color: #fff;
+  font-size: var(--heading-font-size-xl);
+}
+
+/* ------------------------------------------------------------------
+   variant: slim — END
+   ------------------------------------------------------------------ */

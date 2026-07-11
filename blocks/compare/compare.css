@@ -1,0 +1,107 @@
+/*
+ * compare — with/without toggle + Lottie diagram.
+ * Toggle pill cloned verbatim from the live site tab-slider (60px pill,
+ * #df6b21 border, rgba(255,110,25,.16) sliding indicator, 250ms).
+ */
+
+.compare {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.compare .compare-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.compare .compare-tabs {
+  position: relative;
+  display: inline-flex;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--color-display-orange);
+  border-radius: 35px;
+  background: var(--color-bg);
+  overflow: hidden;
+  list-style: none;
+  user-select: none;
+}
+
+.compare .compare-tabs::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48.5%;
+  height: calc(100% - 6px);
+  margin: 3px;
+  border-radius: 35px;
+  background: rgb(255 110 25 / 16%);
+  transition: all 250ms ease-in-out;
+}
+
+.compare .compare-tabs.slide::after { left: 50%; }
+
+.compare .compare-trigger {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 5px 10px;
+  color: var(--color-fg);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: center;
+  transition: color 250ms ease-in-out;
+}
+
+.compare .compare-trigger .inner {
+  min-height: 100%;
+  padding: 4px 16px;
+  border: none;
+  border-radius: 35px;
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+
+.compare .compare-tabs .passiv:hover .inner {
+  background-color: rgb(255 110 25 / 8%);
+}
+
+.compare .compare-trigger.active { color: var(--color-display-orange); }
+
+.compare .compare-lottie {
+  width: 100%;
+  max-width: 1080px;
+  margin: 24px auto 0;
+  aspect-ratio: 1080 / 400;
+}
+
+.compare .compare-lottie svg { display: block; }
+
+/* diagram text alternative: visible pre-decoration, sr-only once decorated */
+.compare .compare-desc {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (width >= 600px) {
+  .compare .compare-tabs { height: 60px; }
+
+  .compare .compare-trigger {
+    font-size: var(--body-font-size-m);
+    font-weight: 700;
+    line-height: 35px;
+  }
+
+  .compare .compare-trigger .inner {
+    min-height: 44px;
+    padding: 6px 35px;
+  }
+}

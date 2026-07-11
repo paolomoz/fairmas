@@ -1,0 +1,55 @@
+/* experts — split media/intro lead + three blurb cards (home) */
+
+.experts .experts-lead {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+
+.experts .experts-media img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.experts .experts-kicker {
+  max-width: none;
+  margin-bottom: 8px;
+  font-size: var(--heading-font-size-s);
+  font-weight: 600;
+}
+
+.experts .experts-lede {
+  font-size: var(--heading-font-size-m);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.experts .experts-blurbs {
+  display: grid;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.experts .experts-blurb {
+  padding: 24px;
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+}
+
+.experts .experts-blurb h3 { margin-bottom: 8px; }
+.experts .experts-blurb p { margin-bottom: 0; }
+
+@media (width >= 900px) {
+  .experts .experts-lead {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 48px;
+  }
+
+  .experts .experts-blurbs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* keep blurb copy on a shared baseline across the row */
+  .experts .experts-blurb h3 { min-height: 2.5em; }
+}

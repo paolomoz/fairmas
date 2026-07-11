@@ -1,0 +1,152 @@
+/*
+ * form — contact form card (non-submitting) on the honeycomb band.
+ * 48px controls, underline inputs, 2-col grid >= 900px.
+ */
+
+/* honeycomb ground on the owning section (block-owned fixed asset #9b/#67) */
+main .form-container {
+  background-color: var(--color-fog);
+  background-image: url('/img/fairmas/contact-form-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main .form-container > div {
+  max-width: 1000px;
+  margin-inline: 0;
+}
+
+.form .form-body {
+  background: var(--color-bg);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: clamp(20px, 4vw, 48px);
+  box-shadow: 0 12px 32px rgb(24 56 73 / 6%);
+}
+
+.form .form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+.form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.form .form-field-label {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-fg);
+}
+
+.form .form-req {
+  color: var(--color-accent-text);
+  font-weight: 700;
+}
+
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='tel'],
+.form select,
+.form textarea {
+  font: inherit;
+  color: var(--color-fg);
+  background: var(--color-bg);
+  border: 0;
+  border-bottom: 2px solid var(--color-meta);
+  border-radius: 0;
+  min-height: 48px;
+  padding: 10px 2px;
+  width: 100%;
+}
+
+.form ::placeholder {
+  color: var(--color-meta);
+  opacity: 1;
+}
+
+.form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23183849' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.form textarea {
+  min-height: 128px;
+  resize: vertical;
+}
+
+.form input:focus-visible,
+.form select:focus-visible,
+.form textarea:focus-visible {
+  outline: 2px solid var(--color-fg);
+  outline-offset: 2px;
+  border-bottom-color: var(--color-fg);
+}
+
+.form .form-checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.form .form-checkbox-row input[type='checkbox'] {
+  width: 24px;
+  height: 24px;
+  margin: 11px 0;
+  flex: none;
+  accent-color: var(--color-accent-text);
+}
+
+.form .form-checkbox-row label {
+  padding-block: 10px;
+  line-height: 1.55;
+}
+
+.form .form-checkbox-row a:any-link {
+  color: var(--color-accent-text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.form .form-checkbox-row a:hover {
+  color: var(--color-fg);
+}
+
+.form .form-actions {
+  align-items: center;
+  margin-top: 8px;
+}
+
+.form .form-actions .button {
+  width: 100%;
+}
+
+.form .form-button-arrow {
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+@media (width >= 900px) {
+  .form .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 48px;
+  }
+
+  .form .form-field-full {
+    grid-column: 1 / -1;
+  }
+
+  .form .form-actions .button {
+    width: auto;
+  }
+}

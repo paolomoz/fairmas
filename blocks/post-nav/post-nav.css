@@ -1,0 +1,87 @@
+/*
+ * post-nav — article previous/next navigation + share row
+ * (visual spec: migrated blogs/usali-12-updates post-nav + share-row).
+ */
+
+.post-nav .post-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-hairline);
+}
+
+.post-nav .post-nav-link {
+  display: block;
+  margin: -8px;
+  padding: 8px;
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+
+.post-nav .post-nav-dir {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-accent-text);
+  font-weight: 700;
+}
+
+.post-nav .post-nav-title {
+  display: block;
+  color: var(--color-meta);
+  font-size: var(--body-font-size-s);
+}
+
+.post-nav .post-nav-link:hover .post-nav-title { color: var(--color-fg); }
+
+.post-nav .post-nav-link:hover .post-nav-dir {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.post-nav .post-nav-share {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.post-nav .post-nav-share p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.post-nav .post-nav-share a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-hairline);
+  border-radius: 50%;
+  color: var(--color-fg);
+}
+
+.post-nav .post-nav-share a:hover {
+  border-color: var(--color-fg);
+  background-color: var(--color-fg);
+  color: #fff;
+}
+
+.post-nav .post-nav-share svg {
+  width: 18px;
+  height: 18px;
+  fill: currentcolor;
+}
+
+@media (width >= 600px) {
+  .post-nav .post-nav-links { flex-direction: row; }
+
+  .post-nav .post-nav-link { max-width: 44%; }
+
+  .post-nav .post-nav-link.next {
+    margin-left: auto;
+    text-align: right;
+  }
+}

@@ -134,7 +134,8 @@ export default async function decorate(block) {
   const brandLink = navBrand.querySelector('.button');
   if (brandLink) {
     brandLink.className = '';
-    brandLink.closest('.button-container').className = '';
+    const brandContainer = brandLink.closest('.button-container, .button-wrapper');
+    if (brandContainer) brandContainer.className = '';
   }
 
   const navSections = nav.querySelector('.nav-sections');
