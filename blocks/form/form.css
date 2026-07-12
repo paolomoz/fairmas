@@ -14,7 +14,7 @@ main .form-container {
 
 main .form-container > div {
   max-width: 1000px;
-  margin-inline: 0;
+  margin-inline: auto;
 }
 
 .form .form-body {
