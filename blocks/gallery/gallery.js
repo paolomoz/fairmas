@@ -62,6 +62,10 @@ export default function decorate(block) {
   const allLabel = orderLabels ? orderLabels[0] : 'All';
   const cats = orderLabels ? orderLabels.slice(1) : seen;
 
+  // per-category counts (shown as a badge on each filter)
+  const counts = {};
+  items.forEach((it) => { const s = slug(it.category); counts[s] = (counts[s] || 0) + 1; });
+
   block.textContent = '';
   block.setAttribute('role', 'group');
   block.setAttribute('aria-label', 'Filterable gallery');
@@ -75,17 +79,23 @@ export default function decorate(block) {
   filters.setAttribute('role', 'toolbar');
   filters.setAttribute('aria-label', 'Filter by category');
 
-  const makeBtn = (label, value, pressed) => {
+  const makeBtn = (label, value, pressed, count) => {
     const b = document.createElement('button');
     b.type = 'button';
     b.className = 'gallery-filter';
-    b.textContent = label;
     b.dataset.cat = value;
     b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    const t = document.createElement('span');
+    t.className = 'gallery-filter-label';
+    t.textContent = label;
+    const c = document.createElement('span');
+    c.className = 'gallery-filter-count';
+    c.textContent = count;
+    b.append(t, c);
     return b;
   };
-  filters.append(makeBtn(allLabel, '*', true));
-  cats.forEach((c) => filters.append(makeBtn(c, slug(c), false)));
+  filters.append(makeBtn(allLabel, '*', true, items.length));
+  cats.forEach((c) => filters.append(makeBtn(c, slug(c), false, counts[slug(c)] || 0)));
 
   const search = document.createElement('div');
   search.className = 'gallery-search';
@@ -96,7 +106,7 @@ export default function decorate(block) {
   input.setAttribute('aria-label', placeholder || 'Search the gallery');
   search.append(input);
 
-  controls.append(filters, search);
+  controls.append(search, filters);
 
   // --- grid ---
   const grid = document.createElement('ul');

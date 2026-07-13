@@ -1,29 +1,76 @@
 /*
- * gallery — filterable logo/name gallery. Category pill tabs + search over a
- * responsive mini-card grid (logo tile + name). Matches the brand system.
+ * gallery — filterable logo/name gallery. A prominent search field, a row of
+ * category filter pills (each with a count), and a responsive grid of bordered
+ * mini-cards (logo + name). Matches the brand system.
  */
-
-.gallery {
-  --gallery-min: 150px;
-}
 
 /* ---- controls ---- */
 .gallery .gallery-controls {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px 24px;
-  margin-bottom: 28px;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
 }
 
+/* ---- search (prominent, rounded, inset icon) ---- */
+.gallery .gallery-search {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+}
+
+.gallery .gallery-search-input {
+  font: inherit;
+  font-size: 16px;
+  color: var(--color-fg);
+  background: var(--color-bg);
+  width: 100%;
+  min-height: 52px;
+  border: 1.5px solid var(--color-hairline);
+  border-radius: 999px;
+  padding: 10px 20px 10px 48px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.gallery .gallery-search-input::placeholder {
+  color: var(--color-meta);
+  opacity: 1;
+}
+
+.gallery .gallery-search-input:hover {
+  border-color: var(--color-meta);
+}
+
+.gallery .gallery-search-input:focus-visible {
+  outline: none;
+  border-color: var(--color-fg);
+  box-shadow: 0 0 0 3px rgb(24 56 73 / 10%);
+}
+
+.gallery .gallery-search::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  background: no-repeat center / contain
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2369727d' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M21 21l-4.3-4.3'/%3E%3C/svg%3E");
+}
+
+/* ---- filter pills (with count badge) ---- */
 .gallery .gallery-filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 .gallery .gallery-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font: inherit;
   font-size: 14px;
   font-weight: 600;
@@ -32,7 +79,7 @@
   background: var(--color-bg);
   border: 1.5px solid var(--color-hairline);
   border-radius: 999px;
-  padding: 0 18px;
+  padding: 0 8px 0 16px;
   min-height: 44px;
   cursor: pointer;
   transition: color 0.15s, background-color 0.15s, border-color 0.15s;
@@ -42,10 +89,29 @@
   border-color: var(--color-fg);
 }
 
+.gallery .gallery-filter-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 24px;
+  padding: 0 7px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-meta);
+  background: var(--color-fog);
+  border-radius: 999px;
+}
+
 .gallery .gallery-filter[aria-pressed='true'] {
   color: var(--color-bg);
   background: var(--color-fg);
   border-color: var(--color-fg);
+}
+
+.gallery .gallery-filter[aria-pressed='true'] .gallery-filter-count {
+  color: var(--color-bg);
+  background: rgb(255 255 255 / 18%);
 }
 
 .gallery .gallery-filter:focus-visible {
@@ -53,46 +119,14 @@
   outline-offset: 2px;
 }
 
-/* ---- search ---- */
-.gallery .gallery-search {
-  position: relative;
-  flex: 1 1 220px;
-  max-width: 320px;
-}
-
-.gallery .gallery-search-input {
-  font: inherit;
-  color: var(--color-fg);
+/* section ground (fog) tints the count/search chrome; keep it readable */
+main .section.fog .gallery .gallery-filter,
+main .section.fog .gallery .gallery-search-input {
   background: var(--color-bg);
-  width: 100%;
-  min-height: 44px;
-  border: 0;
-  border-bottom: 2px solid var(--color-meta);
-  border-radius: 0;
-  padding: 8px 28px 8px 2px;
 }
 
-.gallery .gallery-search-input::placeholder {
-  color: var(--color-meta);
-  opacity: 1;
-}
-
-.gallery .gallery-search-input:focus-visible {
-  outline: none;
-  border-bottom-color: var(--color-fg);
-}
-
-.gallery .gallery-search::after {
-  content: '';
-  position: absolute;
-  right: 4px;
-  top: 50%;
-  width: 16px;
-  height: 16px;
-  transform: translateY(-50%);
-  pointer-events: none;
-  background: no-repeat center / contain
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2369727d' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M21 21l-4.3-4.3'/%3E%3C/svg%3E");
+main .section.fog .gallery .gallery-filter[aria-pressed='false'] .gallery-filter-count {
+  background: var(--color-navy-tint);
 }
 
 /* ---- status ---- */
@@ -109,48 +143,62 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 14px;
 }
 
 .gallery .gallery-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding: 20px 12px 16px;
+  gap: 14px;
+  padding: 24px 14px 18px;
   background: var(--color-bg);
   border: 1px solid var(--color-hairline);
   border-radius: var(--radius);
   text-align: center;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+/* THE FIX: the [hidden] attribute must beat the flex display above */
+.gallery .gallery-card[hidden] {
+  display: none;
+}
+
+.gallery .gallery-card:hover {
+  border-color: var(--color-navy-tint);
+  box-shadow: 0 8px 24px rgb(24 56 73 / 8%);
+  transform: translateY(-2px);
 }
 
 .gallery .gallery-card-logo {
   display: grid;
   place-items: center;
   width: 100%;
-  height: 96px;
+  height: 84px;
 }
 
 .gallery .gallery-card-logo img {
   max-width: 100%;
-  max-height: 96px;
+  max-height: 84px;
   width: auto;
   height: auto;
   object-fit: contain;
 }
 
 .gallery .gallery-card-noimg {
-  font-size: 34px;
+  width: 84px;
+  height: 84px;
+  font-size: 32px;
   font-weight: 700;
-  color: var(--color-navy-tint);
+  color: var(--color-meta);
   background: var(--color-fog);
   border-radius: var(--radius);
 }
 
 .gallery .gallery-card-name {
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.35;
   color: var(--color-fg);
   overflow-wrap: anywhere;
 }
@@ -161,6 +209,23 @@
 }
 
 @media (width >= 600px) {
+  .gallery .gallery-controls {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 24px;
+  }
+
+  .gallery .gallery-search {
+    order: 2;
+    flex: 0 0 auto;
+  }
+
+  .gallery .gallery-filters {
+    order: 1;
+    flex: 1 1 auto;
+  }
+
   .gallery .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
@@ -171,6 +236,6 @@
 @media (width >= 1200px) {
   .gallery .gallery-grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 20px;
+    gap: 18px;
   }
 }
