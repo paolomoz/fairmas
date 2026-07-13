@@ -160,8 +160,35 @@ export function decorateMain(main) {
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
  */
+const LOCALES = ['de', 'es', 'fr', 'it'];
+function pageLocale() {
+  const seg = window.location.pathname.split('/').filter(Boolean)[0];
+  return LOCALES.includes(seg) ? seg : 'en';
+}
+
+/**
+ * hreflang alternates. Locale pages mirror the EN path under a /{loc}/ prefix,
+ * so the EN equivalent is the path with the prefix stripped. Adds self + en +
+ * x-default (client-side; cutover can server-render if needed).
+ */
+function addHreflang() {
+  const loc = pageLocale();
+  const { origin, pathname } = window.location;
+  const enPath = loc === 'en' ? pathname : (pathname.replace(new RegExp(`^/${loc}`), '') || '/');
+  const add = (lang, path) => {
+    const l = document.createElement('link');
+    l.rel = 'alternate';
+    l.hreflang = lang;
+    l.href = origin + path;
+    document.head.append(l);
+  };
+  if (loc !== 'en') add(loc, pathname);
+  add('en', enPath);
+  add('x-default', enPath);
+}
+
 async function loadEager(doc) {
-  document.documentElement.lang = 'en';
+  document.documentElement.lang = pageLocale();
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {
@@ -273,6 +300,7 @@ async function loadLazy(doc) {
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
   addStructuredData();
+  addHreflang();
   import('./consent.js').then(({ default: initConsent }) => initConsent()).catch(() => {});
 }
 
