@@ -1,0 +1,248 @@
+{
+  "/blogs/usali-12-updates": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-11T20:10:36.446Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/contact": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-11T20:10:36.446Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/the-hospitality-show": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-11T20:10:36.446Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/fairplanner": {
+    "status": "live",
+    "attempts": 3,
+    "ts": "2026-07-11T21:26:07.544Z",
+    "put": 200,
+    "preview": 200,
+    "lastError": "preview 409 error from content-bus",
+    "live": 200,
+    "verify": "ok"
+  },
+  "/footer": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-11T20:10:55.314Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/imprint": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-11T20:10:55.334Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/index": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-11T20:11:00.449Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/nav": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-11T20:11:04.717Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/whats-new/all-news": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-11T20:11:07.509Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/who-we-are/about-fairmas": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-11T20:11:11.543Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/book-a-demo": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:27:57.756Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/contact-north-america": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:27:57.757Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/data-protection-software": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:27:57.757Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/privacy-policy": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:28:01.954Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/smarter-hotel-budgeting-forecasting": {
+    "status": "live",
+    "attempts": 2,
+    "ts": "2026-07-13T06:38:00.847Z",
+    "put": 200,
+    "preview": 200,
+    "lastError": "preview 409 error from content-bus",
+    "live": 200,
+    "verify": "ok"
+  },
+  "/support-form-add-change-integrations": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:28:03.308Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/about-our-products": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:28:04.744Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/cash-flow-planning": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:28:06.371Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/financial-planning-controlling-reporting": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:28:06.784Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/hotel-asset-reporting": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:28:08.811Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/hotel-budgeting-forecasting-software": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:28:10.634Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/optimize-hotel-budget-planning": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:28:11.237Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/revenue-planning-and-analytics": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:28:13.269Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/who-we-are/careers": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:28:15.231Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/who-we-are/customers": {
+    "status": "live",
+    "attempts": 2,
+    "ts": "2026-07-13T06:38:00.848Z",
+    "put": 200,
+    "preview": 200,
+    "lastError": "preview 409 error from content-bus",
+    "live": 200,
+    "verify": "ok"
+  },
+  "/who-we-are/integrations": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:28:18.392Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/who-we-are/partners": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T06:28:19.770Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  }
+}

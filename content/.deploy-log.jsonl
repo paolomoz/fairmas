@@ -1,0 +1,31 @@
+{"t":"2026-07-11T20:10:55.297Z","path":"/contact","step":"verify","ok":true}
+{"t":"2026-07-11T20:10:55.313Z","path":"/events/the-hospitality-show","step":"verify","ok":true}
+{"t":"2026-07-11T20:10:55.333Z","path":"/blogs/usali-12-updates","step":"verify","ok":true}
+{"t":"2026-07-11T20:11:00.448Z","path":"/fairplanner","step":"preview","status":409,"text":"error from content-bus"}
+{"t":"2026-07-11T20:11:04.715Z","path":"/footer","step":"verify","ok":true}
+{"t":"2026-07-11T20:11:07.508Z","path":"/imprint","step":"verify","ok":true}
+{"t":"2026-07-11T20:11:11.543Z","path":"/index","step":"verify","ok":true}
+{"t":"2026-07-11T20:11:14.363Z","path":"/nav","step":"verify","ok":true}
+{"t":"2026-07-11T20:11:21.311Z","path":"/whats-new/all-news","step":"verify","ok":true}
+{"t":"2026-07-11T20:11:25.161Z","path":"/who-we-are/about-fairmas","step":"verify","ok":true}
+{"t":"2026-07-11T20:17:15.195Z","path":"/fairplanner","step":"preview","status":409,"text":"error from content-bus"}
+{"t":"2026-07-11T21:26:25.797Z","path":"/fairplanner","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:01.952Z","path":"/data-protection-software","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:02.306Z","path":"/contact-north-america","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:03.307Z","path":"/book-a-demo","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:04.744Z","path":"/smarter-hotel-budgeting-forecasting","step":"preview","status":409,"text":"error from content-bus"}
+{"t":"2026-07-13T06:28:06.370Z","path":"/privacy-policy","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:06.784Z","path":"/support-form-add-change-integrations","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:08.811Z","path":"/what-we-do/about-our-products","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:10.631Z","path":"/what-we-do/cash-flow-planning","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:11.236Z","path":"/what-we-do/financial-planning-controlling-reporting","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:13.268Z","path":"/what-we-do/hotel-asset-reporting","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:15.231Z","path":"/what-we-do/hotel-budgeting-forecasting-software","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:15.274Z","path":"/what-we-do/optimize-hotel-budget-planning","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:18.392Z","path":"/what-we-do/revenue-planning-and-analytics","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:19.770Z","path":"/who-we-are/careers","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:23.421Z","path":"/who-we-are/customers","step":"preview","status":409,"text":"error from content-bus"}
+{"t":"2026-07-13T06:28:24.935Z","path":"/who-we-are/partners","step":"verify","ok":true}
+{"t":"2026-07-13T06:28:28.058Z","path":"/who-we-are/integrations","step":"verify","ok":true}
+{"t":"2026-07-13T06:38:06.026Z","path":"/smarter-hotel-budgeting-forecasting","step":"verify","ok":true}
+{"t":"2026-07-13T06:38:08.518Z","path":"/who-we-are/customers","step":"verify","ok":true}
