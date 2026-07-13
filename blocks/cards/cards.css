@@ -709,3 +709,148 @@ main .section.dark .cards.contacts .cards-card a:hover {
 
 /* a hidden (filtered-out) card must actually disappear (beats the grid item display) */
 .cards.news .cards-card[hidden] { display: none; }
+
+/* ============================================================
+   directory variant — office = typographic ledger (A);
+   person = elevated card with button actions (B).
+   ============================================================ */
+.cards.directory ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 24px 40px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (width >= 600px) {
+  .cards.directory ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (width >= 900px) {
+  .cards.directory ul { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* ---- office card (A) ---- */
+.cards.directory .contact-office {
+  border-top: 2px solid var(--color-fg);
+  padding-top: 14px;
+}
+
+.cards.directory .contact-office-name {
+  margin: 0 0 10px;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--color-fg);
+}
+
+.cards.directory .contact-office .contact-line {
+  margin: 6px 0;
+  font-size: 14px;
+  color: var(--color-fg);
+}
+
+.cards.directory .contact-office .contact-line a { text-decoration: none; }
+
+.cards.directory .contact-office .contact-email a {
+  color: var(--color-accent-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cards.directory .contact-office .contact-addr {
+  margin: 10px 0 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--color-meta);
+}
+
+/* ---- person card (B) ---- */
+.cards.directory .contact-person {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 22px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.cards.directory .contact-person::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-display-orange));
+}
+
+.cards.directory .contact-person:hover {
+  box-shadow: 0 12px 30px rgb(24 56 73 / 10%);
+  transform: translateY(-3px);
+}
+
+.cards.directory .contact-avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--color-navy-tint);
+  margin: 6px 0 14px;
+}
+
+.cards.directory .contact-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cards.directory .contact-kicker {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-accent-text);
+}
+
+.cards.directory .contact-person-name {
+  margin: 3px 0 2px;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: var(--color-fg);
+}
+
+.cards.directory .contact-role {
+  margin: 0 0 10px;
+  font-size: 13.5px;
+  color: var(--color-meta);
+}
+
+.cards.directory .contact-person-email {
+  margin: 0 0 16px;
+  font-size: 14px;
+}
+
+.cards.directory .contact-person-email a {
+  color: var(--color-accent-text);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.cards.directory .contact-person-email a:hover { text-decoration: underline; }
+
+.cards.directory .contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.cards.directory .contact-actions .button {
+  margin: 0;
+  padding: 9px 16px;
+  font-size: 14px;
+}

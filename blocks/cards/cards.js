@@ -267,9 +267,86 @@ function decorateNews(block) {
    generic decode (base + brands/routing/crosslinks variants)
    ============================================================ */
 
+/* ============================================================
+   directory variant — office cards as a typographic ledger (A),
+   person cards as elevated cards with button actions (B). Used on
+   the contact pages (distinct from the navy-band `contacts` variant
+   on the about page). Discriminator: a card with an <img> is a
+   person; without = office.
+   ============================================================ */
+function buildOfficeCard(row) {
+  const li = document.createElement('li');
+  li.className = 'cards-card contact-office';
+  const h3 = row.querySelector('h3');
+  if (h3) { h3.className = 'contact-office-name'; li.append(h3); }
+  [...row.querySelectorAll('p')].forEach((p) => {
+    const a = p.querySelector('a');
+    if (a && a.getAttribute('href')?.startsWith('mailto:')) p.className = 'contact-line contact-email';
+    else if (a && a.getAttribute('href')?.startsWith('tel:')) p.className = 'contact-line contact-phone';
+    else p.className = 'contact-addr';
+    li.append(p);
+  });
+  return li;
+}
+
+function buildPersonCard(row) {
+  const li = document.createElement('li');
+  li.className = 'cards-card contact-person';
+  const img = row.querySelector('img');
+  const h3 = row.querySelector('h3');
+  const ps = [...row.querySelectorAll('p')];
+
+  const avatar = document.createElement('div');
+  avatar.className = 'contact-avatar';
+  if (img) { img.loading = 'lazy'; avatar.append(img); }
+
+  let email = null; let linkedin = null; let booking = null;
+  const plain = [];
+  ps.forEach((p) => {
+    const a = p.querySelector('a');
+    const href = a?.getAttribute('href') || '';
+    if (a && href.startsWith('mailto:')) email = a;
+    else if (a && /linkedin\./i.test(href)) linkedin = a;
+    else if (a) booking = a;
+    else if (p.textContent.trim()) plain.push(p);
+  });
+
+  li.append(avatar);
+  if (plain[0]) { plain[0].className = 'contact-kicker'; li.append(plain[0]); }
+  if (h3) { h3.className = 'contact-person-name'; li.append(h3); }
+  if (plain[1]) { plain[1].className = 'contact-role'; li.append(plain[1]); }
+  if (email) {
+    const line = document.createElement('p');
+    line.className = 'contact-person-email';
+    line.append(email);
+    li.append(line);
+  }
+  if (booking || linkedin) {
+    const acts = document.createElement('div');
+    acts.className = 'contact-actions';
+    if (booking) { booking.className = 'button'; acts.append(booking); }
+    if (linkedin) { linkedin.className = 'button secondary'; acts.append(linkedin); }
+    li.append(acts);
+  }
+  return li;
+}
+
+function decorateDirectory(block) {
+  const ul = document.createElement('ul');
+  [...block.children].forEach((row) => {
+    const li = row.querySelector('img') ? buildPersonCard(row) : buildOfficeCard(row);
+    ul.append(li);
+  });
+  block.replaceChildren(ul);
+}
+
 export default function decorate(block) {
   if (block.classList.contains('news')) {
     decorateNews(block);
+    return;
+  }
+  if (block.classList.contains('directory')) {
+    decorateDirectory(block);
     return;
   }
 
