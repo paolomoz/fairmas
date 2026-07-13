@@ -177,12 +177,51 @@ function buildNewsCard(row, index) {
     body.append(span);
   }
 
+  const primaryCat = chipTexts.find((c) => c && c.toLowerCase() !== 'all news') || chipTexts[0] || '';
+  if (primaryCat) li.dataset.cat = primaryCat;
+
   const img = image.querySelector('img');
   if (img && index > 0 && !img.getAttribute('loading')) img.loading = 'lazy';
   if (image.children.length) li.prepend(image);
   else li.prepend(buildNoImageTile(chipTexts[0]));
   if (body.children.length) li.append(body);
   return li;
+}
+
+const catSlug = (s) => (s || '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+
+/** category filter bar for a news grid spanning >1 category (e.g. all-news) */
+function buildNewsFilter(lis, ul) {
+  const cats = [];
+  lis.forEach((li) => { const c = li.dataset.cat; if (c && !cats.includes(c)) cats.push(c); });
+  if (cats.length < 2) return null;
+
+  const bar = document.createElement('div');
+  bar.className = 'cards-filter';
+  bar.setAttribute('role', 'toolbar');
+  bar.setAttribute('aria-label', 'Filter by category');
+  const mk = (label, val, on) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'cards-filter-btn';
+    b.textContent = label;
+    b.dataset.cat = val;
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    return b;
+  };
+  bar.append(mk('All', '*', true));
+  cats.forEach((c) => bar.append(mk(c, catSlug(c), false)));
+
+  bar.addEventListener('click', (e) => {
+    const btn = e.target.closest('.cards-filter-btn');
+    if (!btn) return;
+    const val = btn.dataset.cat;
+    bar.querySelectorAll('.cards-filter-btn').forEach((b) => b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'));
+    ul.querySelectorAll('.cards-card').forEach((li) => {
+      li.hidden = !(val === '*' || catSlug(li.dataset.cat) === val);
+    });
+  });
+  return bar;
 }
 
 /** news grid decode: optional heading row, one card per row, rhythm by index */
@@ -216,6 +255,8 @@ function decorateNews(block) {
 
   ul.append(...lis);
   block.replaceChildren(ul);
+  const filter = buildNewsFilter(lis, ul);
+  if (filter) ul.before(filter);
   if (heading) {
     heading.classList.add('cards-heading');
     block.prepend(heading);

@@ -1,0 +1,56 @@
+version: 1
+
+indices:
+  content:
+    include:
+      - '/blogs/**'
+      - '/press-releases/**'
+      - '/case-studies-white-papers/**'
+      - '/events/**'
+    target: /query-index.json
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, 'content')
+      image:
+        select: head > meta[property="og:image"]
+        value: attribute(el, 'content')
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, 'content')
+      category:
+        select: head > meta[name="category"]
+        value: attribute(el, 'content')
+      author:
+        select: head > meta[name="author"]
+        value: attribute(el, 'content')
+      publishdate:
+        select: head > meta[name="publishdate"]
+        value: attribute(el, 'content')
+      publishdatedisplay:
+        select: head > meta[name="publishdatedisplay"]
+        value: attribute(el, 'content')
+      readtime:
+        select: head > meta[name="readtime"]
+        value: attribute(el, 'content')
+      startdate:
+        select: head > meta[name="startdate"]
+        value: attribute(el, 'content')
+      enddate:
+        select: head > meta[name="enddate"]
+        value: attribute(el, 'content')
+      daterange:
+        select: head > meta[name="daterange"]
+        value: attribute(el, 'content')
+      location:
+        select: head > meta[name="location"]
+        value: attribute(el, 'content')
+      eventstatus:
+        select: head > meta[name="eventstatus"]
+        value: attribute(el, 'content')
+      lastmodified:
+        select: none
+        value: parseTimestamp(headers('last-modified'), 'ddd, DD MMM YYYY hh:mm:ss GMT')
