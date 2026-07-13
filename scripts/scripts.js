@@ -273,6 +273,7 @@ async function loadLazy(doc) {
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
   addStructuredData();
+  import('./consent.js').then(({ default: initConsent }) => initConsent()).catch(() => {});
 }
 
 /**
