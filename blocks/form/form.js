@@ -8,9 +8,135 @@
  * checkbox sentence (links preserved).
  *
  * CSP rules (strict-dynamic): no <form> element, no action, the send button
- * is type="button", and no inline handlers. Submit + captcha provider are
- * wired at migrate time, not here.
+ * is type="button", and no inline handlers.
+ *
+ * Submission (EDS-native, replaces the retired Elementor/AlanCaptcha stack):
+ * client-side required-field validation + inline errors, optional Cloudflare
+ * Turnstile, and a JSON POST to a configurable endpoint. Config comes from
+ * page metadata (authored, no code change):
+ *   <meta name="form-endpoint" content="https://…">      (submission URL)
+ *   <meta name="turnstile-sitekey" content="0x4AAA…">     (optional captcha)
+ * Until an endpoint is configured the form validates but does not send, and
+ * shows a clear notice — nothing is transmitted to a placeholder.
  */
+
+const cfg = (name) => document.querySelector(`meta[name="${name}"]`)?.content?.trim() || '';
+
+function setError(field, msg) {
+  const ctrl = field.querySelector('input, select, textarea');
+  let err = field.querySelector('.form-error');
+  if (!err) {
+    err = document.createElement('span');
+    err.className = 'form-error';
+    field.append(err);
+  }
+  err.textContent = msg || '';
+  if (ctrl) {
+    ctrl.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    if (msg && !ctrl.getAttribute('aria-describedby')) ctrl.setAttribute('aria-describedby', `${ctrl.id}-err`);
+    err.id = `${ctrl.id}-err`;
+  }
+  return !msg;
+}
+
+function validate(body) {
+  let firstBad = null;
+  body.querySelectorAll('.form-field').forEach((field) => {
+    const ctrl = field.querySelector('input, select, textarea');
+    if (!ctrl) return;
+    let msg = '';
+    const val = ctrl.type === 'checkbox' ? ctrl.checked : ctrl.value.trim();
+    if (ctrl.required && (val === '' || val === false)) msg = 'This field is required.';
+    else if (ctrl.type === 'email' && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) msg = 'Enter a valid email address.';
+    setError(field, msg);
+    if (msg && !firstBad) firstBad = ctrl;
+  });
+  if (firstBad) firstBad.focus();
+  return !firstBad;
+}
+
+function collect(body) {
+  const data = {};
+  body.querySelectorAll('input, select, textarea').forEach((ctrl) => {
+    if (!ctrl.name) return;
+    data[ctrl.name] = ctrl.type === 'checkbox' ? ctrl.checked : ctrl.value;
+  });
+  return data;
+}
+
+function loadTurnstile(body, sitekey) {
+  const holder = document.createElement('div');
+  holder.className = 'form-turnstile cf-turnstile';
+  holder.dataset.sitekey = sitekey;
+  const actions = body.querySelector('.form-actions');
+  if (actions) actions.before(holder); else body.querySelector('.form-grid').append(holder);
+  if (!document.querySelector('script[src*="challenges.cloudflare.com"]')) {
+    const s = document.createElement('script');
+    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+    s.async = true;
+    s.defer = true;
+    document.head.append(s);
+  }
+}
+
+function wireSubmit(body) {
+  const button = body.querySelector('button.button');
+  if (!button) return;
+  const endpoint = cfg('form-endpoint');
+  const sitekey = cfg('turnstile-sitekey');
+
+  const status = document.createElement('p');
+  status.className = 'form-status';
+  status.setAttribute('role', 'status');
+  status.setAttribute('aria-live', 'polite');
+  body.append(status);
+
+  if (sitekey) loadTurnstile(body, sitekey);
+
+  button.addEventListener('click', async () => {
+    status.className = 'form-status';
+    status.textContent = '';
+    if (!validate(body)) { status.classList.add('form-status-error'); status.textContent = 'Please fix the highlighted fields.'; return; }
+
+    const token = window.turnstile?.getResponse?.();
+    if (sitekey && !token) { status.classList.add('form-status-error'); status.textContent = 'Please complete the verification.'; return; }
+
+    if (!endpoint) {
+      status.classList.add('form-status-error');
+      status.textContent = 'This form is not connected to a submission endpoint yet.';
+      return;
+    }
+
+    const payload = {
+      ...collect(body),
+      formName: body.getAttribute('aria-label') || 'Contact form',
+      pageUrl: window.location.href,
+      ...(token ? { turnstileToken: token } : {}),
+    };
+    button.disabled = true;
+    const original = button.textContent;
+    button.textContent = 'Sending…';
+    try {
+      const resp = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const done = document.createElement('div');
+      done.className = 'form-success';
+      done.setAttribute('role', 'status');
+      done.innerHTML = '<h3>Thank you!</h3><p>Your message has been sent. Our team will be in touch shortly.</p>';
+      body.replaceChildren(done);
+    } catch (e) {
+      button.disabled = false;
+      button.textContent = original;
+      window.turnstile?.reset?.();
+      status.classList.add('form-status-error');
+      status.textContent = 'Sorry — something went wrong sending your message. Please try again or email us directly.';
+    }
+  });
+}
 
 const AUTOCOMPLETE = [
   [/e-?mail/i, 'email'],
@@ -163,4 +289,5 @@ export default function decorate(block) {
   });
 
   block.replaceChildren(body);
+  wireSubmit(body);
 }

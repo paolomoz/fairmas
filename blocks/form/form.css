@@ -150,3 +150,44 @@ main .form-container > div {
     width: auto;
   }
 }
+
+/* ---- submission: validation errors, status, success ---- */
+.form .form-error {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #b3261e;
+}
+
+.form input[aria-invalid='true'],
+.form select[aria-invalid='true'],
+.form textarea[aria-invalid='true'] {
+  border-bottom-color: #b3261e;
+}
+
+.form .form-turnstile {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+}
+
+.form .form-status {
+  margin: 14px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-fg);
+}
+
+.form .form-status-error { color: #b3261e; }
+
+.form .form-success {
+  text-align: center;
+  padding: 24px 8px;
+}
+
+.form .form-success h3 {
+  margin: 0 0 8px;
+  color: var(--color-accent-text);
+}
+
+.form .form-success > :last-child { margin-bottom: 0; }
