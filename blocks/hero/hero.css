@@ -306,6 +306,20 @@ main .hero-container:has(.hero.slim) > div {
   font-size: var(--heading-font-size-xl);
 }
 
+.hero.slim .hero-content :is(p, li) {
+  margin: 14px 0 0;
+  max-width: 65ch;
+  color: rgb(255 255 255 / 88%);
+  font-size: var(--body-font-size-m, 1.05rem);
+  line-height: 1.55;
+}
+
+.hero.slim .hero-content a:any-link {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ------------------------------------------------------------------
    variant: slim — END
    ------------------------------------------------------------------ */
