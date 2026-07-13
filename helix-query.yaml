@@ -1,6 +1,32 @@
 version: 1
 
 indices:
+  search:
+    include:
+      - '/**'
+    exclude:
+      - '/nav'
+      - '/footer'
+      - '/fragments/**'
+      - '/drafts/**'
+    target: /search-index.json
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, 'content')
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, 'content')
+      image:
+        select: main img
+        value: attribute(el, 'src')
+      keywords:
+        select: main h1, main h2, main h3
+        values:
+          - textContent(el)
   content:
     include:
       - '/blogs/**'

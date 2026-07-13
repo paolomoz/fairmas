@@ -190,9 +190,34 @@ header nav .nav-sections .default-content-wrapper > ul > li:last-child {
   border-bottom: 0;
 }
 
-/* tools — Book a demo CTA (global button system provides the pill) */
+/* tools — search icon + Book a demo CTA (global button system provides the pill) */
 header nav .nav-tools {
   grid-area: tools;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header nav .nav-tools p { margin: 0; }
+
+/* search entry: render the "/search" link as a magnifier icon button */
+header nav .nav-tools a[href='/search'] {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  color: transparent;
+  font-size: 0;
+  background: no-repeat center / 20px 20px
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23183849' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E");
+}
+
+header nav .nav-tools a[href='/search']:hover { background-color: var(--color-navy-tint); }
+
+header nav .nav-tools a[href='/search']:focus-visible {
+  outline: 2px solid var(--color-fg);
+  outline-offset: 2px;
 }
 
 header nav .nav-tools .button-wrapper,
