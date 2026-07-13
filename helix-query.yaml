@@ -16,8 +16,8 @@ indices:
         select: head > meta[name="description"]
         value: attribute(el, 'content')
       image:
-        select: head > meta[property="og:image"]
-        value: attribute(el, 'content')
+        select: main img
+        value: attribute(el, 'src')
       template:
         select: head > meta[name="template"]
         value: attribute(el, 'content')
