@@ -1,27 +1,670 @@
-.cards > ul {
-  list-style: none;
+/* stylelint-disable no-descending-specificity */
+
+/*
+ * cards — generic card grid (decoded shape: ul > li.cards-card >
+ * .cards-card-image / .cards-card-body). Variant CSS lives in clearly
+ * delimited sections below; keep the base section untouched.
+ */
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+.cards ul {
+  display: grid;
+  gap: 24px;
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+.cards .cards-card-image img {
+  width: 100%;
+  height: auto;
+}
+
+.cards .cards-card-body > :last-child { margin-bottom: 0; }
+
+/* ============================================================
+   VARIANT: brands — white logo chips (home customers wall on the
+   dark proof band: 12 logos, 6-up; integrations wall on fog: 9
+   logos, 3-up; both collapse per the migrated spec on mobile)
+   ============================================================ */
+
+.cards.brands ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.cards.brands .cards-card {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  place-items: center;
+  min-height: 112px;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: #fff;
 }
 
-.cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+.cards.brands .cards-card-image {
+  display: grid;
+  place-items: center;
 }
 
-.cards .cards-card-body {
-  margin: 16px;
+.cards.brands .cards-card-image img {
+  max-height: 64px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
 }
 
-.cards .cards-card-image {
+/* integrations wall (fog ground): hairline chips, 3-up at every width */
+main .section.fog .cards.brands ul {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+main .section.fog .cards.brands .cards-card {
+  border: 1px solid var(--color-hairline);
+}
+
+@media (width >= 900px) {
+  .cards.brands ul { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+
+  main .section.fog .cards.brands ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* --- default-content support for the brand walls --------------- */
+
+/* customers head: stat numerals authored as <em> inside the h2 */
+main .section.dark .default-content-wrapper h2 em {
+  color: var(--color-display-orange);
+  font-style: normal;
+}
+
+/* "See more" link after a wall */
+main .cards-wrapper + .default-content-wrapper {
+  margin-top: 16px;
+}
+
+main .cards-wrapper + .default-content-wrapper a {
+  font-weight: 600;
+}
+
+/* integrations head stat pull-out: authored as trailing
+   "<p><strong>200+</strong> interfaces</p>" in the section head */
+main .section.fog.cards-container .default-content-wrapper {
+  position: relative;
+}
+
+main .section.fog.cards-container .default-content-wrapper > p:last-of-type:has(> strong:first-child) {
+  margin: 0;
+  font-weight: 600;
+}
+
+main .section.fog.cards-container .default-content-wrapper > p:last-of-type:has(> strong:first-child) strong {
+  display: block;
+  color: var(--color-accent-text);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@media (width >= 900px) {
+  main .section.fog.cards-container .default-content-wrapper > p:last-of-type:has(> strong:first-child) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+  }
+}
+
+/* ============================================================
+   VARIANT: news — BEGIN (listing/article templates agent)
+   chips + h3 title + date·read-time meta + excerpt + Read more;
+   whole-card stretched link (single tab stop); no-image cards get
+   the brand-mark tile with category watermark; rhythm inferred by
+   index in decorate(): card 1 = split feature, every 7th = wide
+   card alternating navy/tint grounds (grids > 6 cards only).
+   ============================================================ */
+
+/* the optional authored grid heading (bridges h1 → card h3s) */
+.cards.news .cards-heading {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.cards.news ul {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.cards.news .cards-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius);
+  background-color: var(--color-bg);
+  transition: border-color 0.15s ease;
+}
+
+.cards.news .cards-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.cards.news .cards-card:focus-within {
+  outline: 2px solid var(--color-fg);
+  outline-offset: 2px;
+}
+
+.cards.news .cards-card-image {
   line-height: 0;
 }
 
-.cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
+.cards.news .cards-card-image img {
+  aspect-ratio: 16 / 9;
   object-fit: cover;
+  border-bottom: 1px solid var(--color-hairline);
 }
+
+/* image-less card: brand-mark tile + category watermark */
+.cards.news .cards-card-noimg {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-navy-tint);
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.cards.news .cards-card-noimg img {
+  width: 38%;
+  height: auto;
+  filter: grayscale(1) opacity(0.45);
+}
+
+.cards.news .cards-noimg-mark {
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  color: #9fb0bb;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cards.news .cards-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 24px;
+}
+
+.cards.news .cards-card-body > * { margin: 0; }
+
+.cards.news .cards-card-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.cards.news .cards-card-chips span {
+  padding: 3px 10px;
+  border: 1px solid #f0cdb2;
+  border-radius: 999px;
+  background-color: #fbe9dc;
+  color: #8f3d0a;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cards.news .cards-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.cards.news .cards-card-title a {
+  color: var(--color-fg);
+  text-decoration: none;
+}
+
+/* whole card = single link target (stretched link, card-size hit area) */
+.cards.news .cards-card-title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* the card carries the focus ring via :focus-within */
+.cards.news .cards-card-title a:focus-visible { outline: none; }
+
+.cards.news .cards-card:hover .cards-card-title a {
+  color: var(--color-accent-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cards.news .cards-card-meta {
+  color: var(--color-meta);
+  font-size: var(--body-font-size-xs);
+}
+
+.cards.news .cards-card-excerpt {
+  margin-bottom: 16px;
+  color: var(--color-fg);
+  font-size: var(--body-font-size-s);
+  line-height: 1.5;
+}
+
+.cards.news .cards-card-more {
+  margin-top: auto;
+  padding-top: 4px;
+  color: var(--color-accent-text);
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cards.news .cards-card:hover .cards-card-more { color: var(--color-fg); }
+
+@media (width >= 600px) {
+  .cards.news ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (width >= 900px) {
+  .cards.news ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  /* rhythm (refero-grounded): featured lead + periodic full-width breaks */
+  .cards.news .cards-card-feature {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: center;
+  }
+
+  .cards.news .cards-card-feature .cards-card-image img,
+  .cards.news .cards-card-wide .cards-card-image img {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .cards.news .cards-card-feature .cards-card-body { padding: 48px; }
+  .cards.news .cards-card-feature .cards-card-title { font-size: var(--heading-font-size-l); }
+  .cards.news .cards-card-feature .cards-card-excerpt { font-size: 17px; }
+
+  .cards.news .cards-card-wide {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: center;
+  }
+
+  .cards.news .cards-card-wide .cards-card-body { padding: 24px 48px; }
+  .cards.news .cards-card-wide .cards-card-title { font-size: var(--heading-font-size-m); }
+}
+
+.cards.news .cards-card-navy {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--color-navy-ink) 0%, var(--color-fg) 100%);
+}
+
+.cards.news .cards-card-navy:hover { border-color: var(--color-accent); }
+
+.cards.news .cards-card-navy .cards-card-title,
+.cards.news .cards-card-navy .cards-card-title a,
+.cards.news .cards-card-navy .cards-card-more {
+  color: #fff;
+}
+
+.cards.news .cards-card-navy .cards-card-meta,
+.cards.news .cards-card-navy .cards-card-excerpt {
+  color: var(--color-navy-tint);
+}
+
+.cards.news .cards-card-tint {
+  background: var(--color-navy-tint);
+}
+
+/* meta gray fails AA on the tint ground — darkened per migrated spec */
+.cards.news .cards-card-tint .cards-card-meta { color: var(--color-meta-tint); }
+
+/* ============================================================
+   VARIANT: news — END
+   ============================================================ */
+
+/* ============================================================
+   VARIANT: brands modifiers — BEGIN (templates agent)
+   interfaces: fairplanner 200+ interfaces wall (11 logos + a
+   text-only "200+ interfaces" stat chip), 4-up on fog.
+   customers: fairplanner proof-band chips (6-up, roomier logos).
+   ============================================================ */
+
+.cards.brands.interfaces .cards-card {
+  min-height: 96px;
+  padding: 14px;
+}
+
+.cards.brands.interfaces .cards-card-image img {
+  max-height: 52px;
+}
+
+/* text-only stat chip: big accent numeral over a small label */
+.cards.brands.interfaces .cards-card-body {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.cards.brands.interfaces .cards-card-body p {
+  margin: 0;
+  max-width: none;
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  color: var(--color-fg);
+}
+
+.cards.brands.interfaces .cards-card-body p:first-child {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-accent-text);
+}
+
+main .section.fog .cards.brands.interfaces ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cards.brands.customers .cards-card {
+  min-height: 120px;
+  padding: 10px;
+}
+
+.cards.brands.customers .cards-card-image img {
+  max-height: 96px;
+  width: 82%;
+  object-fit: contain;
+}
+
+/* captured light-grey SilverBirch mark fails on the white chip */
+.cards.brands.customers img[alt^='SilverBirch'] {
+  filter: grayscale(1) brightness(0.45);
+}
+
+@media (width >= 600px) {
+  main .section.fog .cards.brands.interfaces ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 900px) {
+  main .section.fog .cards.brands.interfaces ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ============================================================
+   VARIANT: brands modifiers — END
+   ============================================================ */
+
+/* ============================================================
+   VARIANT: routing — BEGIN (templates agent)
+   contact page router: 3 white cards (title + copy + tel/mailto
+   links or a primary button) on a white panel over fog.
+   ============================================================ */
+
+.cards.routing {
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.cards.routing ul {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.cards.routing .cards-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius);
+  padding: 24px 24px 48px;
+  box-shadow: 0 10px 24px rgb(24 56 73 / 8%);
+}
+
+.cards.routing .cards-card-title {
+  font-size: clamp(24px, 1vw + 16px, 28px);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cards.routing .cards-card-body p {
+  max-width: none;
+}
+
+.cards.routing .cards-card a:not(.button) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-accent-text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.cards.routing .cards-card a:not(.button):hover {
+  color: var(--color-fg);
+}
+
+.cards.routing .cards-card .button-wrapper {
+  margin-top: 24px;
+}
+
+@media (width >= 900px) {
+  .cards.routing {
+    padding: 48px;
+  }
+
+  .cards.routing ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ============================================================
+   VARIANT: routing — END
+   ============================================================ */
+
+/* ============================================================
+   VARIANT: crosslinks — BEGIN (templates agent)
+   about page router: 3 fog cards (title + copy + Read more link)
+   on the navy band.
+   ============================================================ */
+
+.cards.crosslinks ul {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.cards.crosslinks .cards-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-fog);
+  border-radius: var(--radius);
+  padding: 48px 24px;
+}
+
+.cards.crosslinks .cards-card-title {
+  font-size: var(--heading-font-size-l);
+  color: var(--color-fg);
+}
+
+.cards.crosslinks .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cards.crosslinks .cards-card-body p {
+  color: var(--color-fg);
+  margin-bottom: 24px;
+}
+
+.cards.crosslinks .cards-card-link {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+main .section .cards.crosslinks .cards-card a:any-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-accent-text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+main .section .cards.crosslinks .cards-card a:hover {
+  color: var(--color-fg);
+}
+
+.cards.crosslinks .cards-card-link a::after {
+  content: '→';
+  margin-left: 6px;
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  .cards.crosslinks ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ============================================================
+   VARIANT: crosslinks — END
+   ============================================================ */
+
+/* ============================================================
+   VARIANT: contacts — BEGIN (templates agent)
+   about page regional contact cards: 4 outlined cards on the navy
+   band (region title + phone / mailto / address lines).
+   ============================================================ */
+
+.cards.contacts ul {
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: 24px;
+}
+
+.cards.contacts .cards-card {
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.cards.contacts .cards-card-title {
+  color: #fff;
+  font-size: var(--heading-font-size-m);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+main .section.dark .cards.contacts .cards-card p {
+  font-size: 15px;
+  color: var(--color-navy-tint);
+  margin-bottom: 8px;
+  max-width: none;
+}
+
+main .section.dark .cards.contacts .cards-card a:any-link {
+  display: inline-block;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding-block: 11px;
+  margin-block: -6px;
+}
+
+main .section.dark .cards.contacts .cards-card a:hover {
+  color: var(--color-navy-tint);
+}
+
+@media (width >= 600px) {
+  .cards.contacts ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 900px) {
+  .cards.contacts ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ============================================================
+   VARIANT: contacts — END
+   ============================================================ */
+
+/* ============================================================
+   VARIANT: legal — BEGIN (templates agent)
+   imprint statutory facts: 2x2 white cards (h2 label + value
+   lines) on paper.
+   ============================================================ */
+
+.cards.legal ul {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.cards.legal .cards-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius);
+  padding: clamp(24px, 4vw, 48px);
+}
+
+.cards.legal .cards-card-title {
+  font-size: var(--heading-font-size-s);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cards.legal .cards-card-title:not(:first-child) {
+  margin-top: 24px;
+}
+
+.cards.legal .cards-card p {
+  margin: 0;
+  max-width: none;
+}
+
+.cards.legal .cards-card a:any-link {
+  display: inline-block;
+  padding-block: 12px;
+  margin-block: -12px;
+  padding-inline: 4px;
+  margin-inline: -4px;
+}
+
+@media (width >= 900px) {
+  .cards.legal ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ============================================================
+   VARIANT: legal — END
+   ============================================================ */

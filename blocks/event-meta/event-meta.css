@@ -1,0 +1,125 @@
+/*
+ * event-meta — Details + Venue reference panels on fog, with a native
+ * <details> add-to-calendar disclosure.
+ */
+
+main .event-meta-container > div {
+  max-width: 1010px;
+}
+
+.event-meta .event-meta-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.event-meta .event-meta-panel {
+  background: var(--color-bg);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.event-meta .event-meta-panel h2,
+.event-meta .event-meta-panel h3 {
+  font-size: var(--body-font-size-m);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.event-meta .event-meta-panel p {
+  margin-bottom: 8px;
+}
+
+.event-meta .event-meta-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.event-meta dl {
+  margin: 0;
+}
+
+.event-meta dt {
+  font-weight: 700;
+}
+
+.event-meta dd {
+  margin: 0 0 16px;
+  overflow-wrap: anywhere;
+}
+
+.event-meta dd:last-of-type {
+  margin-bottom: 0;
+}
+
+.event-meta .event-meta-panel a:any-link {
+  color: var(--color-accent-text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.event-meta .event-meta-panel a:hover {
+  color: var(--color-fg);
+}
+
+.event-meta .event-meta-calendar {
+  margin-top: 16px;
+  border-top: 1px solid var(--color-hairline);
+  padding-top: 8px;
+}
+
+.event-meta .event-meta-calendar summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  color: var(--color-accent-text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.event-meta .event-meta-calendar summary::-webkit-details-marker {
+  display: none;
+}
+
+.event-meta .event-meta-calendar summary:hover {
+  color: var(--color-fg);
+}
+
+.event-meta .event-meta-caret {
+  font-size: 10px;
+  color: var(--color-meta);
+}
+
+.event-meta .event-meta-calendar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.event-meta .event-meta-calendar li a:any-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+/* event body button (section before this block): sentence case, not the
+   uppercase pill — matches the migrated event page's long sentence CTA */
+main .section:has(+ .event-meta-container) a.button {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+@media (width >= 900px) {
+  .event-meta .event-meta-grid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  }
+}

@@ -1,0 +1,71 @@
+/*
+ * stats — fact tiles on a white card grid (about page).
+ * Numerals: display orange 56px/700 — large-text (>=3:1) on the white card.
+ */
+
+.stats {
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  padding: clamp(24px, 5vw, 64px);
+}
+
+.stats .stats-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 16px;
+  text-align: center;
+}
+
+.stats .stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.stats .stat-num {
+  margin: 0;
+  max-width: none;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-display-orange);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.stats .stat-icon {
+  margin: 0 auto 8px;
+}
+
+.stats .stat-icon img {
+  display: block;
+  height: 72px;
+  width: auto;
+}
+
+.stats .stat-label {
+  margin: 0 auto;
+  max-width: 22ch;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-fg);
+}
+
+@media (width >= 900px) {
+  .stats .stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 48px 24px;
+  }
+
+  .stats .stat-num {
+    font-size: clamp(40px, 4vw, 56px);
+  }
+
+  .stats .stat-label {
+    font-size: 18px;
+  }
+}

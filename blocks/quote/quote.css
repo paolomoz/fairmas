@@ -1,0 +1,104 @@
+/* stylelint-disable no-descending-specificity -- dark-section overrides and block
+   rules target the same tags at different specificity by design */
+
+/* quote — featured testimonial (centered; inherits ground from section) */
+
+.quote {
+  max-width: 860px;
+  margin-inline: auto;
+
+  /* mobile reads left-aligned; centers from tablet up */
+  text-align: left;
+}
+
+.quote blockquote {
+  max-width: 55ch;
+  margin: 0 auto 24px;
+  font-size: 22px;
+  line-height: 1.55;
+}
+
+.quote blockquote p {
+  max-width: none;
+  color: inherit;
+}
+
+main .section.dark .quote blockquote,
+main .section.dark .quote blockquote p {
+  color: #fff;
+}
+
+.quote .quote-attrib {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.quote .quote-logo {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  padding: 10px;
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.quote .quote-logo img {
+  max-height: 56px;
+  width: auto;
+}
+
+.quote .quote-who { text-align: left; }
+
+.quote .quote-name {
+  display: block;
+  font-weight: 700;
+}
+
+.quote .quote-role {
+  display: block;
+  font-size: var(--body-font-size-s);
+}
+
+main .section.dark .quote .quote-name { color: #fff; }
+main .section.dark .quote .quote-role { color: var(--color-navy-tint); }
+
+.quote .quote-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 24px;
+}
+
+.quote .quote-cta p { margin: 0; }
+
+/* ------------------------------------------------------------------
+   navy proof band rhythm (home): the dark section holds
+   h2 → quote → customers head → cards(brands) → see-more link
+   ------------------------------------------------------------------ */
+
+main .section.dark .default-content-wrapper:has(+ .quote-wrapper) {
+  text-align: center;
+}
+
+/* band divider between the testimonial and the customers wall */
+main .section.dark .quote-wrapper + .default-content-wrapper {
+  margin-top: var(--section-padding);
+  padding-top: var(--section-padding);
+  border-top: 1px solid rgb(255 255 255 / 18%);
+}
+
+@media (width >= 600px) {
+  .quote { text-align: center; }
+
+  .quote .quote-attrib,
+  .quote .quote-cta {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,171 @@
+/*
+ * features — fairplanner capability ledger.
+ * Text-only rows: hairline-topped 5/7 ledger rows (h3 left, body right).
+ * Media rows: alternating split rows; authored images sit on a white card,
+ * the block-owned payroll video carries its own pause control.
+ */
+
+.features .feature-row {
+  padding-block: 32px;
+}
+
+.features .feature-row h3 {
+  font-size: var(--heading-font-size-m);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.features .feature-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- text-only ledger rows ---- */
+.features .feature-row-text {
+  border-top: 1px solid var(--color-hairline);
+  padding-top: 32px;
+}
+
+.features .feature-row-text .feature-copy p {
+  max-width: 40rem;
+  font-size: 17px;
+}
+
+.features .feature-row-text .feature-copy p.feature-footnote {
+  font-size: var(--body-font-size-xs);
+  max-width: 70ch;
+}
+
+/* footnote — small meta text (USALI disclaimer) */
+.features .feature-footnote {
+  color: var(--color-meta);
+  margin-top: 24px;
+}
+
+.features .feature-footnote a:any-link {
+  color: var(--color-accent-text);
+}
+
+.features .feature-footnote a:hover {
+  color: var(--color-fg);
+}
+
+/* ---- media rows ---- */
+.features .feature-media {
+  position: relative;
+  margin: 24px 0 0;
+}
+
+/* authored illustration sits on a white card */
+.features .feature-media:not(.feature-media-video) {
+  background: var(--color-bg);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: grid;
+  place-items: center;
+}
+
+.features .feature-media img {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+}
+
+.features .feature-media video {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-hairline);
+  background: var(--color-bg);
+}
+
+.features .feature-video-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 8px 18px;
+  border: 1px solid var(--color-hairline);
+  border-radius: 999px;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: inherit;
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.features .feature-video-toggle:hover {
+  border-color: var(--color-fg);
+}
+
+@media (width >= 900px) {
+  .features .feature-row {
+    padding-block: 40px;
+  }
+
+  .features .feature-row-text {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 48px;
+    align-items: start;
+    padding-top: 40px;
+  }
+
+  .features .feature-row-text h3 {
+    margin-bottom: 0;
+  }
+
+  /* body top aligns with the heading baseline (migrated ledger rhythm) */
+  .features .feature-row-text .feature-body {
+    padding-top: 7px;
+  }
+
+  .features .feature-row-media {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+    align-items: center;
+  }
+
+  .features .feature-row-media .feature-copy {
+    order: 1;
+  }
+
+  .features .feature-row-media .feature-media {
+    order: 2;
+    margin: 0;
+  }
+
+  /* alternate media side */
+  .features .feature-row-flip .feature-copy {
+    order: 2;
+  }
+
+  .features .feature-row-flip .feature-media {
+    order: 1;
+  }
+
+  .features .feature-media:not(.feature-media-video) {
+    padding: 48px;
+  }
+
+  .features .feature-video-toggle {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    margin-top: 0;
+  }
+}
+
+/* stylelint-disable no-descending-specificity -- section-scoped default-content
+   rule appended after the block cascade; no real conflict with .feature-copy */
+
+/* default content following the block in the same section (e.g. the USALI
+   footnote authored after a features instance) reads as small meta text */
+main .features-container .default-content-wrapper p {
+  font-size: var(--body-font-size-xs);
+  color: var(--color-meta);
+  max-width: 70ch;
+}

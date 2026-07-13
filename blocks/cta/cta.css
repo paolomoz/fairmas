@@ -1,0 +1,39 @@
+/* cta — shared pre-footer call-to-action band (section style "tint") */
+
+.cta { text-align: center; }
+
+.cta .cta-content p {
+  margin-inline: auto;
+}
+
+.cta .cta-kicker {
+  max-width: none;
+  margin-bottom: 8px;
+  font-size: var(--heading-font-size-s);
+  font-weight: 600;
+}
+
+.cta .cta-actions {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 16px;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.cta .cta-actions p {
+  display: flex;
+  margin: 0;
+}
+
+.cta .cta-actions a.button { flex: 1; }
+
+@media (width >= 600px) {
+  .cta .cta-actions {
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .cta .cta-actions a.button { flex: none; }
+}
