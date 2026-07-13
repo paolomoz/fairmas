@@ -1,245 +1,125 @@
 {
-  "/blogs/usali-12-updates": {
+  "/glossary/average-daily-rate-adr": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-11T20:10:36.446Z",
+    "ts": "2026-07-13T08:25:32.969Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/contact": {
+  "/glossary/average-room-rate": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-11T20:10:36.446Z",
+    "ts": "2026-07-13T08:25:32.970Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/events/the-hospitality-show": {
+  "/resources/asset-library": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-11T20:10:36.446Z",
+    "ts": "2026-07-13T08:25:32.970Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/fairplanner": {
-    "status": "live",
-    "attempts": 3,
-    "ts": "2026-07-11T21:26:07.544Z",
-    "put": 200,
-    "preview": 200,
-    "lastError": "preview 409 error from content-bus",
-    "live": 200,
-    "verify": "ok"
-  },
-  "/footer": {
+  "/resources/faq": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-11T20:10:55.314Z",
-    "put": 200,
-    "preview": 200,
-    "live": 200,
-    "verify": "ok"
-  },
-  "/imprint": {
-    "status": "live",
-    "attempts": 1,
-    "ts": "2026-07-11T20:10:55.334Z",
+    "ts": "2026-07-13T08:25:37.774Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/index": {
+  "/resources/glossary": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-11T20:11:00.449Z",
-    "put": 200,
-    "preview": 200,
-    "live": 200,
-    "verify": "ok"
-  },
-  "/nav": {
-    "status": "live",
-    "attempts": 1,
-    "ts": "2026-07-11T20:11:04.717Z",
-    "put": 200,
-    "preview": 200,
-    "live": 200,
-    "verify": "ok"
-  },
-  "/whats-new/all-news": {
-    "status": "live",
-    "attempts": 1,
-    "ts": "2026-07-11T20:11:07.509Z",
+    "ts": "2026-07-13T08:25:37.918Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/who-we-are/about-fairmas": {
+  "/resources/webinar/fairmas-hotstats-webinar-2025-video": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-11T20:11:11.543Z",
+    "ts": "2026-07-13T08:25:38.083Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/book-a-demo": {
+  "/resources/webinar/hospitality-dialogue-fairmas-hotstats-webinar-2024": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T06:27:57.756Z",
+    "ts": "2026-07-13T08:25:42.152Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/contact-north-america": {
+  "/resources/webinar/hospitality-dialogue-fairmas-hotstats-webinar-2025": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T06:27:57.757Z",
+    "ts": "2026-07-13T08:25:42.184Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/data-protection-software": {
+  "/resources/webinar/tech-matchmaker-webinar": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T06:27:57.757Z",
+    "ts": "2026-07-13T08:25:42.622Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/privacy-policy": {
+  "/resources": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T06:28:01.954Z",
+    "ts": "2026-07-13T08:25:46.121Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/smarter-hotel-budgeting-forecasting": {
-    "status": "live",
-    "attempts": 2,
-    "ts": "2026-07-13T06:38:00.847Z",
-    "put": 200,
-    "preview": 200,
-    "lastError": "preview 409 error from content-bus",
-    "live": 200,
-    "verify": "ok"
-  },
-  "/support-form-add-change-integrations": {
+  "/whats-new/blogs": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T06:28:03.308Z",
+    "ts": "2026-07-13T08:25:46.511Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/what-we-do/about-our-products": {
+  "/whats-new/case-studies-white-papers": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T06:28:04.744Z",
+    "ts": "2026-07-13T08:25:46.815Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/what-we-do/cash-flow-planning": {
+  "/whats-new/press-releases": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T06:28:06.371Z",
+    "ts": "2026-07-13T08:25:50.282Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/what-we-do/financial-planning-controlling-reporting": {
+  "/whats-new": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T06:28:06.784Z",
-    "put": 201,
-    "preview": 200,
-    "live": 200,
-    "verify": "ok"
-  },
-  "/what-we-do/hotel-asset-reporting": {
-    "status": "live",
-    "attempts": 1,
-    "ts": "2026-07-13T06:28:08.811Z",
-    "put": 201,
-    "preview": 200,
-    "live": 200,
-    "verify": "ok"
-  },
-  "/what-we-do/hotel-budgeting-forecasting-software": {
-    "status": "live",
-    "attempts": 1,
-    "ts": "2026-07-13T06:28:10.634Z",
-    "put": 201,
-    "preview": 200,
-    "live": 200,
-    "verify": "ok"
-  },
-  "/what-we-do/optimize-hotel-budget-planning": {
-    "status": "live",
-    "attempts": 1,
-    "ts": "2026-07-13T06:28:11.237Z",
-    "put": 201,
-    "preview": 200,
-    "live": 200,
-    "verify": "ok"
-  },
-  "/what-we-do/revenue-planning-and-analytics": {
-    "status": "live",
-    "attempts": 1,
-    "ts": "2026-07-13T06:28:13.269Z",
-    "put": 201,
-    "preview": 200,
-    "live": 200,
-    "verify": "ok"
-  },
-  "/who-we-are/careers": {
-    "status": "live",
-    "attempts": 1,
-    "ts": "2026-07-13T06:28:15.231Z",
-    "put": 201,
-    "preview": 200,
-    "live": 200,
-    "verify": "ok"
-  },
-  "/who-we-are/customers": {
-    "status": "live",
-    "attempts": 2,
-    "ts": "2026-07-13T06:38:00.848Z",
-    "put": 200,
-    "preview": 200,
-    "lastError": "preview 409 error from content-bus",
-    "live": 200,
-    "verify": "ok"
-  },
-  "/who-we-are/integrations": {
-    "status": "live",
-    "attempts": 1,
-    "ts": "2026-07-13T06:28:18.392Z",
-    "put": 201,
-    "preview": 200,
-    "live": 200,
-    "verify": "ok"
-  },
-  "/who-we-are/partners": {
-    "status": "live",
-    "attempts": 1,
-    "ts": "2026-07-13T06:28:19.770Z",
+    "ts": "2026-07-13T08:25:51.302Z",
     "put": 201,
     "preview": 200,
     "live": 200,
