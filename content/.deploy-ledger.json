@@ -1,215 +1,224 @@
 {
-  "/de/contact": {
+  "/es/contact": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:10:52.142Z",
+    "ts": "2026-07-13T18:32:19.305Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/data-protection-software": {
+  "/es/data-protection-software": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:10:52.143Z",
+    "ts": "2026-07-13T18:32:19.306Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/footer": {
+  "/es/footer": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:10:52.143Z",
+    "ts": "2026-07-13T18:32:19.306Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/imprint": {
+  "/es/imprint": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:10:52.143Z",
+    "ts": "2026-07-13T18:32:19.306Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/nav": {
+  "/es/nav": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:10:56.809Z",
+    "ts": "2026-07-13T18:32:24.290Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/privacy-policy": {
+  "/es/privacy-policy": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:10:56.925Z",
+    "ts": "2026-07-13T18:32:24.299Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/resources/events-kalendar": {
+  "/es/resources/calendario-eventos": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:10:57.053Z",
+    "ts": "2026-07-13T18:32:24.305Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/resources/faq": {
+  "/es/resources/faq": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:10:57.338Z",
+    "ts": "2026-07-13T18:32:24.471Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/resources/glossary": {
+  "/es/resources/glossary": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:01.399Z",
+    "ts": "2026-07-13T18:32:28.796Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/what-we-do/about-our-products": {
+  "/es/what-we-do/about-our-products": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:01.603Z",
+    "ts": "2026-07-13T18:32:28.885Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/what-we-do/cash-flow-planning": {
+  "/es/what-we-do/cash-flow-planning": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:01.700Z",
+    "ts": "2026-07-13T18:32:28.932Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/what-we-do/financial-planning-controlling-reporting": {
+  "/es/what-we-do/financial-planning-controlling-reporting": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:02.013Z",
+    "ts": "2026-07-13T18:32:29.037Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/what-we-do/hotel-asset-reporting": {
+  "/es/what-we-do/hotel-asset-reporting": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:05.830Z",
+    "ts": "2026-07-13T18:32:32.874Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/what-we-do/revenue-planning-and-analytics": {
+  "/es/what-we-do/hotel-budgeting-forecasting-software": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:06.016Z",
+    "ts": "2026-07-13T18:32:33.200Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/whats-new/all-news": {
+  "/es/what-we-do/revenue-planning-and-analytics": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:06.269Z",
+    "ts": "2026-07-13T18:32:33.264Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/whats-new/blogs": {
+  "/es/whats-new/all-news": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:06.969Z",
+    "ts": "2026-07-13T18:32:34.251Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/whats-new/case-studies-white-papers": {
+  "/es/whats-new/blogs": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:10.090Z",
+    "ts": "2026-07-13T18:32:37.468Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/whats-new/press-releases": {
+  "/es/whats-new/case-studies-white-papers": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:11.523Z",
+    "ts": "2026-07-13T18:32:37.993Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/who-we-are/about-fairmas": {
+  "/es/whats-new/press-releases": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:12.983Z",
+    "ts": "2026-07-13T18:32:38.820Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/who-we-are/careers": {
+  "/es/who-we-are/about-fairmas": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:13.197Z",
+    "ts": "2026-07-13T18:32:40.864Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/who-we-are/customers": {
+  "/es/who-we-are/careers": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:14.421Z",
+    "ts": "2026-07-13T18:32:42.661Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/who-we-are/integrations": {
+  "/es/who-we-are/customers": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:16.197Z",
+    "ts": "2026-07-13T18:32:43.219Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de/who-we-are/partners": {
+  "/es/who-we-are/integrations": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:17.447Z",
+    "ts": "2026-07-13T18:32:43.553Z",
     "put": 201,
     "preview": 200,
     "live": 200,
     "verify": "ok"
   },
-  "/de": {
+  "/es/who-we-are/partners": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T18:11:18.019Z",
+    "ts": "2026-07-13T18:32:45.547Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/es": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T18:32:46.911Z",
     "put": 201,
     "preview": 200,
     "live": 200,
