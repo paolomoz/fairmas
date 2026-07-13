@@ -1,8 +1,440 @@
 {
+  "/blogs/10-strategies-financial-automation-hospitality": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:19.949Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/5-tips-to-successfully-introduce-rolling-forecasting-with-fairplanner": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:19.949Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/accrual-accounting-for-hotels-financial-planning": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:19.949Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/automation-through-integrations-breaking-data-silos-in-hospitality-finance": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:19.949Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/boosting-hotel-financial-performance-with-fairmas-unleashing-the-power-of-hospitality-business-intelligence": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:25.387Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/consolidation-hotel-key-figures-at-group-level": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:25.604Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/cost-controlling-hotel-financial-planning-2025": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:25.679Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/dynamic-budgeting-hotel-fairmas-hotstats": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:26.560Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/effective-operating-cash-flow-management-hotel-industry": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:30.768Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/efficient-multi-year-planning-of-hotel-profitability": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:31.268Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/enhancing-decision-making": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:31.335Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/fairmas-hotstats-2-way-interface-launch": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:31.969Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/fairmas-hotstats-budget-guide": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:35.941Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/fairmas-hotstats-collaborative-infographic": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:36.484Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/fairmas-integrations-2025": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:36.745Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/fairmas-top-newly-added-hotel-software-features-of-2021": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:37.358Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/features-capabilities-data-management-for-hotel-assets": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:41.798Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/fee-lease-management-hotel-financial-planning": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:41.804Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/forecasting-on-sight": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:42.029Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/fpa-software-matters-political-uncertainty": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:42.390Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/fragmented-hotel-financial-data": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:47.027Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/hidden-hotel-revenue-hotellistat": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:47.061Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/hotel-budgeting-with-fairmas": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:47.269Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/hotel-financial-success-with-fairmas": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:47.393Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/hotel-yearbook-interview-ai-impact-on-hospitality": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:52.187Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/how-digitalized-is-your-asset-management-reporting": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:52.345Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/how-to-decide-on-an-fpa-software-for-your-hotel": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:52.594Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/how-to-jump-start-financial-planning-for-post-corona-scenarios": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:53.345Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/mastering-success-zero-based-budgeting-for-hotels": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:57.594Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/maximizing-hotel-asset-potential": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:57.607Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/multi-property-hotel-groups-north-america-fpa-software": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:58.194Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/navigating-current-financial-challenges-in-the-hospitality-industry-leveraging-fairmas-financial-planning-analysis-software": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:28:59.757Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/precision-over-hype-ai-hospitality-finance": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:03.008Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/strategic-financial-planning-uncertain-times": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:03.132Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/strategic-forecasting-and-budgeting-empowering-hospitality-financial-professionals": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:03.144Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/the-story-of-someone-shaped-by-the-hotel-business": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:04.683Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/top-10-features-of-an-effective-hotel-financial-planning-and-reporting-tool": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:08.968Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/top-hospitality-trends-in-2022": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:09.166Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/usali-12-updates": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:09.242Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/what-is-fairpayroll-how-can-it-help-you": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:10.460Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/blogs/why-hotel-asset-reporting-is-becoming-essential-for-investment-decisions": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:14.330Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
   "/book-a-demo": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T16:41:05.708Z",
+    "ts": "2026-07-13T17:29:14.465Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/case-studies-white-papers/dynamic-financial-reporting": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:14.547Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/case-studies-white-papers/fairmas-tidan-success-story": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:15.936Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/case-studies-white-papers/narai-hospitality-group-fpa-fairmas": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:19.632Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/case-studies-white-papers/silverbirch-hotels-fairmas-financial-planning": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:20.276Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/case-studies-white-papers/streamlining-financial-processes-for-international-operator": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:20.484Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/case-studies-white-papers/wharf-hotels-improves-hotel-budgeting-with-localised-financial-planning-analysis-in-fairplanner-by-fairmas": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:21.066Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/case-studies-white-papers/white-paper-digitalization-asset-management": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:25.254Z",
     "put": 200,
     "preview": 200,
     "live": 200,
@@ -11,7 +443,7 @@
   "/contact-north-america": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T16:41:05.709Z",
+    "ts": "2026-07-13T17:29:26.395Z",
     "put": 200,
     "preview": 200,
     "live": 200,
@@ -20,7 +452,844 @@
   "/contact": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T16:41:05.709Z",
+    "ts": "2026-07-13T17:29:26.630Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/data-protection-software": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:27.134Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/196-forum-milan": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:31.191Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/6th-cornell-lodging-outlook-berlin": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:31.471Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/aahoacon": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:31.567Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/ace-hotel-tech-summit-dubai": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:32.904Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/aohis-madrid": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:36.393Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/association-hoteliere-grand-montreal": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:36.920Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/bcha-summit-marketplace": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:37.547Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/bit-milano": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:37.786Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/btl-lisbon": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:41.380Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/canadian-hotel-investment-conference": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:42.260Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/connect-hospitality-marketplace-ahp": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:43.207Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/digital-transformation-in-hotel-technology": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:44.017Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/expo-real": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:47.437Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/fitur": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:48.103Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/foro-hosteltur": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:49.329Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/future-hospitality-summit-dubai": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:49.465Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/future-hospitality-summit-saudi-arabia": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:52.756Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/global-revenue-forum": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:53.797Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/gtha-business-outlook-forum": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:54.511Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/gulf-and-indian-ocean-hotel-investors-summit": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:55.011Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hac-conference-canada": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:57.847Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hftp-annual-convention": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:58.827Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hitec-2026-san-antonio": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:29:59.882Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hitec-charlotte": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:00.165Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hitec-indianapolis": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:03.262Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hospace-london": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:03.984Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hospitality-day-rimini": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:06.239Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hospitality-il-salone-dellaccoglienza": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:06.488Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hospitality-summit-hotellerie-suisse": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:08.874Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hospitalitysud-napoli": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:09.518Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hotco-vienna": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:11.735Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hotel-data-conference": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:12.032Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hotel-revolution-summit-dubai": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:14.712Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/hunter-conference": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:15.350Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/ihg-americas-investors-leadership-conference-2024": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:16.808Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/ihif-asia": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:17.648Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/ihif": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:20.375Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/ihtf-asia-pacific": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:20.588Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/ihtf-asia": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:22.038Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/ihtf-europe": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:23.018Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/ihtf-mena": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:26.646Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/ihtf-uk": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:26.926Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/improve-hotel": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:28.119Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/independent-hotel-show-amsterdam": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:28.419Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/international-hospitality-investment-forum": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:31.427Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/irish-hotels-federation-annual-conference": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:32.793Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/itb-berlin": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:34.602Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/ithic-rome": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:34.625Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/luxury-hospitality-conference-milan": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:36.689Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/nyu-hotel-investment-conference": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:38.046Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/quebec-hotel-investment-conference": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:41.251Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/resort-and-residential-hospitality-forum": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:41.588Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/southeast-asia-hotel-investors-summit": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:42.624Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/swiss-deluxe-hotels-conference": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:43.651Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/tech-in-hospitality-summit-london": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:47.074Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/the-district-show-barcelona": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:47.210Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/the-hospitality-show": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:48.474Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/ttg-travel-experience-rimini": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:50.321Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/events/western-canadian-lodging-conference": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:52.347Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/fairplanner": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:52.700Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/footer": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:54.264Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/glossary/average-daily-rate-adr": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:56.116Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/glossary/average-room-rate": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:58.084Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/imprint": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:59.449Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/index": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:30:59.586Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/nav": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:02.508Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/fairmas-announces-a-new-office-in-north-america": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:03.161Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/fairmas-announces-presence-with-a-booth-at-hitec-2024": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:05.364Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/fairmas-appoints-alexander-oehme": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:05.831Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/fairmas-appoints-chiara-gianformaggio-italy": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:08.310Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/fairmas-celebrates-20th-anniversary": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:09.359Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/fairmas-cloudbeds-integration": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:10.402Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/fairmas-expands-global-presence-with-new-office-in-italy": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:11.075Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/fairmas-hands-over-the-hotel-benchmarking-to-partner-str": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:13.527Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/fairmas-invesco-white-paper": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:14.458Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/fairmas-newest-software-generations-global-rollout-for-ihg-hotels-and-resorts-completed-successfully": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:16.341Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/fairmas-welcomes-business-development-manager-for-north-america": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:17.555Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/fairmas-welcomes-sundar-sitaula-as-data-scientist-pioneering-ai-driven-innovation": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:19.324Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/rolf-arndt-named-managing-director-of-fairmas-services-gmbh": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:19.412Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/press-releases/tahil-mascarenhas-fairmas-north-america": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:21.904Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/privacy-policy": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:23.688Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/resources/asset-library": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:24.885Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/resources/events-calendar": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:25.597Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/resources/faq": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:27.196Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/resources/glossary": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:29.024Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/resources/webinar/fairmas-hotstats-webinar-2025-video": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:29.984Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/resources/webinar/hospitality-dialogue-fairmas-hotstats-webinar-2024": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:31.564Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/resources/webinar/hospitality-dialogue-fairmas-hotstats-webinar-2025": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:32.422Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/resources/webinar/tech-matchmaker-webinar": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:34.861Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/resources": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:35.144Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/search": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:36.761Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/smarter-hotel-budgeting-forecasting": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:37.508Z",
     "put": 200,
     "preview": 200,
     "live": 200,
@@ -29,7 +1298,160 @@
   "/support-form-add-change-integrations": {
     "status": "live",
     "attempts": 1,
-    "ts": "2026-07-13T16:41:05.709Z",
+    "ts": "2026-07-13T17:31:40.395Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/about-our-products": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:40.598Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/cash-flow-planning": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:40.659Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/financial-planning-controlling-reporting": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:43.891Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/hotel-asset-reporting": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:45.692Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/hotel-budgeting-forecasting-software": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:46.336Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/optimize-hotel-budget-planning": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:46.399Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/what-we-do/revenue-planning-and-analytics": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:50.539Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/whats-new/all-news": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:51.497Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/whats-new/blogs": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:52.190Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/whats-new/case-studies-white-papers": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:52.587Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/whats-new/press-releases": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:56.992Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/whats-new": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:57.997Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/who-we-are/about-fairmas": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:58.837Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/who-we-are/careers": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:31:59.022Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/who-we-are/customers": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:32:03.762Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/who-we-are/integrations": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:32:03.815Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/who-we-are/partners": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-07-13T17:32:05.766Z",
     "put": 200,
     "preview": 200,
     "live": 200,
