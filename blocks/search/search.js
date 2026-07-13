@@ -22,7 +22,7 @@ function labelFor(item) {
 
 function score(item, terms) {
   const title = (item.title || '').toLowerCase();
-  const kw = (item.keywords || '').toLowerCase();
+  const kw = (Array.isArray(item.keywords) ? item.keywords.join(' ') : (item.keywords || '')).toLowerCase();
   const desc = (item.description || '').toLowerCase();
   const path = (item.path || '').toLowerCase();
   let s = 0;
