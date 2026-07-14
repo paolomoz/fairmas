@@ -167,22 +167,33 @@ function pageLocale() {
 }
 
 /**
- * hreflang alternates. Locale pages mirror the EN path under a /{loc}/ prefix,
- * so the EN equivalent is the path with the prefix stripped. Adds self + en +
- * x-default (client-side; cutover can server-render if needed).
+ * hreflang alternates. Uses the build-time cross-locale cluster map
+ * (/hreflang.json) so pages with real translations (accounting for slug
+ * variants like events-calendar and per-locale gaps) emit a full bidirectional
+ * cluster; anything not in the map falls back to self + EN + x-default.
  */
-function addHreflang() {
+async function addHreflang() {
   const loc = pageLocale();
   const { origin, pathname } = window.location;
-  const enPath = loc === 'en' ? pathname : (pathname.replace(new RegExp(`^/${loc}`), '') || '/');
-  const add = (lang, path) => {
+  const path = pathname.replace(/\/$/, '') || '/';
+  const add = (lang, p) => {
     const l = document.createElement('link');
     l.rel = 'alternate';
     l.hreflang = lang;
-    l.href = origin + path;
+    l.href = origin + p;
     document.head.append(l);
   };
-  if (loc !== 'en') add(loc, pathname);
+  try {
+    const map = await fetch(`${window.hlx.codeBasePath}/hreflang.json`).then((r) => r.json());
+    const cluster = map.lookup?.[path];
+    if (cluster) {
+      Object.entries(cluster).forEach(([lang, p]) => add(lang, p));
+      if (cluster.en) add('x-default', cluster.en);
+      return;
+    }
+  } catch (e) { /* fall through to baseline */ }
+  const enPath = loc === 'en' ? path : (path.replace(new RegExp(`^/${loc}`), '') || '/');
+  if (loc !== 'en') add(loc, path);
   add('en', enPath);
   add('x-default', enPath);
 }

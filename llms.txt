@@ -1,0 +1,29 @@
+# Fairmas
+
+> Fairmas is a Berlin-based software company (since 2003) specializing in hotel
+> financial planning, controlling, reporting and analysis. Its FairPlanner
+> platform and related tools serve 5,500+ hotels and 18,000+ users worldwide,
+> with 200+ integrations across PMS, ERP, RMS and benchmarking systems.
+> Available in English, German, Spanish, French and Italian.
+
+## Products
+- [FairPlanner](https://www.fairmas.com/fairplanner): hotel budgeting & forecasting software
+- [About our products](https://www.fairmas.com/what-we-do/about-our-products)
+- [Financial Planning, Controlling & Reporting](https://www.fairmas.com/what-we-do/financial-planning-controlling-reporting)
+- [Cash Flow Planning](https://www.fairmas.com/what-we-do/cash-flow-planning)
+- [Revenue Planning & Analytics](https://www.fairmas.com/what-we-do/revenue-planning-and-analytics)
+- [Hotel Asset Reporting](https://www.fairmas.com/what-we-do/hotel-asset-reporting)
+
+## Company
+- [About Fairmas](https://www.fairmas.com/who-we-are/about-fairmas)
+- [Customers](https://www.fairmas.com/who-we-are/customers)
+- [Integrations](https://www.fairmas.com/who-we-are/integrations)
+- [Partners](https://www.fairmas.com/who-we-are/partners)
+- [Contact](https://www.fairmas.com/contact)
+
+## Resources
+- [All News](https://www.fairmas.com/whats-new/all-news)
+- [Blogs](https://www.fairmas.com/whats-new/blogs)
+- [Glossary of hospitality terms](https://www.fairmas.com/resources/glossary)
+- [FAQ](https://www.fairmas.com/resources/faq)
+- [Events calendar](https://www.fairmas.com/resources/events-calendar)
