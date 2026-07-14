@@ -1,8 +1,0 @@
-# fairmas.com
-User-agent: *
-Allow: /
-
-# No value in crawling the client-side search results
-Disallow: /search
-
-Sitemap: https://www.fairmas.com/sitemap.xml
