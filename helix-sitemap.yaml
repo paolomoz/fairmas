@@ -1,0 +1,11 @@
+version: 1
+
+# Source the sitemap from the `search` index (helix-query.yaml) instead of the
+# default "all published documents" behaviour. That index excludes the chrome
+# fragments (/nav, /footer and their localized variants) and drafts, so they no
+# longer leak into sitemap.xml as crawlable pages. The index's `robots` property
+# lets the generator drop any page carrying `robots: noindex` metadata.
+sitemaps:
+  default:
+    source: /search-index.json
+    destination: /sitemap.xml

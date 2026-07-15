@@ -170,6 +170,12 @@ blockquote {
 
 main p { max-width: 70ch; }
 
+/* Break long words/URLs (legal pages, long article titles) so content never
+   forces horizontal scroll on narrow viewports. */
+main :is(p, li, h1, h2, h3, h4, h5, h6, dt, dd, td, figcaption, blockquote) {
+  overflow-wrap: anywhere;
+}
+
 code,
 pre {
   font-size: var(--body-font-size-s);
@@ -250,15 +256,21 @@ button.button.secondary:hover {
   color: var(--color-fg);
 }
 
-/* on-navy variants — scoped to section AND block-level dark surfaces */
+/* on-navy variants — scoped to section AND block-level dark surfaces.
+   .embed renders on a navy-ink band, so its secondary button must read
+   white too (dark-orange accent-text on navy fails WCAG contrast). */
 main .on-navy a.button.secondary,
-main .section.dark a.button.secondary {
+main .section.dark a.button.secondary,
+main .embed a.button.secondary,
+main .embed button.button.secondary {
   border-color: rgb(255 255 255 / 55%);
   color: #fff;
 }
 
 main .on-navy a.button.secondary:hover,
-main .section.dark a.button.secondary:hover {
+main .section.dark a.button.secondary:hover,
+main .embed a.button.secondary:hover,
+main .embed button.button.secondary:hover {
   border-color: #fff;
   color: #fff;
 }

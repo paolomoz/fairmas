@@ -29,6 +29,11 @@ export default function decorate(block) {
     const qText = document.createElement('span');
     qText.className = 'accordion-q-text';
     qText.append(...q.childNodes);
+    // A <summary> is interactive; a nested link/button is an a11y violation
+    // (axe nested-interactive). Unwrap any interactive descendants to text.
+    qText.querySelectorAll('a, button').forEach((el) => {
+      el.replaceWith(...el.childNodes);
+    });
     const icon = document.createElement('span');
     icon.className = 'accordion-icon';
     icon.setAttribute('aria-hidden', 'true');
