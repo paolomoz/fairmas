@@ -1,0 +1,21 @@
+/*
+ * fairmas fonts — Inter variable (OFL 1.1, self-hosted; captured brand face).
+ * Loaded lazily by scripts.js loadFonts(); the metric-matched 'Inter Fallback'
+ * in styles.css makes the swap CLS-free.
+ */
+
+@font-face {
+  font-family: Inter;
+  src: url('/styles/fonts/inter-var.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('/styles/fonts/inter-var-italic.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}

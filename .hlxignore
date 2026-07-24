@@ -5,3 +5,7 @@ LICENSE
 package.json
 package-lock.json
 test/*
+
+# readable sources for the minified head files (not served)
+scripts/*.source.js
+styles/*.source.css
