@@ -1,5 +1,7 @@
-{"t":"2026-07-15T07:15:00.952Z","path":"/es/resources/faq","step":"verify","ok":true}
-{"t":"2026-07-15T07:15:01.026Z","path":"/fr/resources/faq","step":"verify","ok":true}
-{"t":"2026-07-15T07:15:01.035Z","path":"/de/resources/faq","step":"verify","ok":true}
-{"t":"2026-07-15T07:15:06.467Z","path":"/it/blogs/features-capabilities-data-management-for-hotel-assets","step":"verify","ok":true}
-{"t":"2026-07-15T07:15:06.480Z","path":"/it/resources/faq","step":"verify","ok":true}
+{"t":"2026-07-24T09:54:44.324Z","path":"/de/data-protection-software","step":"verify","ok":true}
+{"t":"2026-07-24T09:54:44.416Z","path":"/data-protection-software","step":"verify","ok":true}
+{"t":"2026-07-24T09:54:44.840Z","path":"/de/press-releases/fairmas-invesco-whitepaper","step":"verify","ok":true}
+{"t":"2026-07-24T09:54:49.486Z","path":"/it/data-protection-software","step":"verify","ok":true}
+{"t":"2026-07-24T09:54:49.505Z","path":"/es/data-protection-software","step":"verify","ok":true}
+{"t":"2026-07-24T09:54:49.636Z","path":"/fr/data-protection-software","step":"verify","ok":true}
+{"t":"2026-07-24T09:54:54.407Z","path":"/resources/asset-library","step":"verify","ok":true}
