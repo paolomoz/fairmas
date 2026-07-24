@@ -222,80 +222,6 @@ async function loadEager(doc) {
  * Loads everything that doesn't need to be delayed.
  * @param {Element} doc The container element
  */
-const ORG = {
-  '@type': 'Organization',
-  '@id': 'https://fairmas.com/#organization',
-  name: 'Fairmas GmbH',
-  url: 'https://fairmas.com',
-  logo: 'https://fairmas.com/wp-content/uploads/2022/09/Logo-Fairmas_new-orange_newarrow.png',
-  sameAs: ['https://de.linkedin.com/company/fairmas-gmbh', 'https://www.facebook.com/FairmasGmbH'],
-};
-
-/**
- * Restore the structured-data graph on every page (client-side; the migrated
- * prototypes carried it inline in <head>, which EDS content pages cannot).
- * Per-template entities are built from REAL on-page data — never fabricated;
- * a field whose source isn't confidently present on the page is omitted.
- */
-function addStructuredData() {
-  const canonical = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
-  const title = (document.querySelector('main h1')?.textContent || document.title).trim();
-  const description = getMetadata('description');
-  const ogImage = document.querySelector('meta[property="og:image"]')?.content;
-  const path = window.location.pathname.replace(/\/$/, '') || '/';
-
-  const graph = [
-    ORG,
-    {
-      '@type': 'WebSite', '@id': 'https://fairmas.com/#website', url: 'https://fairmas.com', name: 'Fairmas', publisher: { '@id': 'https://fairmas.com/#organization' },
-    },
-    {
-      '@type': 'WebPage', '@id': `${canonical}#webpage`, url: canonical, name: document.title, ...(description ? { description } : {}), isPartOf: { '@id': 'https://fairmas.com/#website' }, about: { '@id': 'https://fairmas.com/#organization' },
-    },
-  ];
-
-  // BreadcrumbList from path segments
-  const segs = path.split('/').filter(Boolean);
-  const crumbs = [{
-    '@type': 'ListItem', position: 1, name: 'Home', item: 'https://fairmas.com/',
-  }];
-  segs.forEach((seg, i) => {
-    const name = seg.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-    crumbs.push({
-      '@type': 'ListItem', position: i + 2, name, ...(i === segs.length - 1 ? {} : { item: `https://fairmas.com/${segs.slice(0, i + 1).join('/')}/` }),
-    });
-  });
-  if (crumbs.length > 1) graph.push({ '@type': 'BreadcrumbList', itemListElement: crumbs });
-
-  if (path === '/fairplanner') {
-    graph.push({
-      '@type': 'SoftwareApplication', name: 'FairPlanner', applicationCategory: 'BusinessApplication', operatingSystem: 'Web', provider: { '@id': 'https://fairmas.com/#organization' }, ...(description ? { description } : {}),
-    });
-  } else if (path.startsWith('/blogs/') || path.startsWith('/whats-new/')) {
-    const meta = document.querySelector('main .article-card .article-byline, main [class*="byline"]')?.textContent || '';
-    const author = meta.split('|')[0]?.split('·')[0]?.trim();
-    const article = {
-      '@type': 'Article', headline: title, ...(ogImage ? { image: ogImage } : {}), publisher: { '@id': 'https://fairmas.com/#organization' }, mainEntityOfPage: { '@id': `${canonical}#webpage` },
-    };
-    if (author && /^[A-Za-z].{2,40}$/.test(author) && !/\d/.test(author)) article.author = { '@type': 'Person', name: author };
-    if (path.startsWith('/blogs/')) graph.push(article);
-  } else if (path.startsWith('/events/')) {
-    const venue = document.querySelector('main .event-meta')?.textContent || '';
-    const event = { '@type': 'Event', name: title, organizer: { '@id': 'https://fairmas.com/#organization' } };
-    if (/San Antonio|Convention Center/.test(venue)) {
-      event.location = { '@type': 'Place', name: 'Henry B. Gonzalez Convention Center', address: '900 E. Market Street, San Antonio, TX 78205, United States' };
-    }
-    graph.push(event);
-  } else if (path === '/contact') {
-    graph.push({ '@type': 'ContactPage', '@id': `${canonical}#webpage`, url: canonical });
-  }
-
-  const el = document.createElement('script');
-  el.type = 'application/ld+json';
-  el.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
-  document.head.append(el);
-}
-
 async function loadLazy(doc) {
   loadHeader(doc.querySelector('header'));
 
@@ -310,7 +236,6 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
-  addStructuredData();
   addHreflang();
   import('./consent.js').then(({ default: initConsent }) => initConsent()).catch(() => {});
 }
